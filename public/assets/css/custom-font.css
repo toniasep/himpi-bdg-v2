@@ -1,0 +1,20 @@
+@font-face{font-family:"inter";src:url("../fonts/inter/Inter-Regular.otf");}
+@font-face{font-family:"sora";src:url("../fonts/Sora/Sora-Regular.ttf");}
+@font-face{font-family:"sorabold";src:url("../fonts/Sora/Sora-Bold.ttf");}
+@font-face{font-family:"public";src:url("../fonts/Public_Sans/PublicSans-Regular.ttf");}
+@font-face{font-family:"monument";src:url("../fonts/MonumentExtended-FreeForPersonalUse/MonumentExtended-Regular.otf");}
+
+/* @font-face{font-family:"ntwagner";src:url("../fonts/NT-Wagner.otf");} */
+/* @font-face {
+    font-family: 'NT Wagner Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('NT Wagner Bold'), url('../fonts/NT Wagner (only personal use).woff') format('woff');
+    } */
+/* worksans */
+/* @font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Work Sans'), url('../fonts/WorkSans-Regular.ttf') format('ttf');
+    } */

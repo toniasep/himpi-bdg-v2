@@ -1,0 +1,201 @@
+@extends('layouts.template-guest')
+@section('title')
+    Beranda
+@endsection
+@section('content')
+    <section class="wrapper bg-soft-primary" id="mobile" style="overflow-x: hidden;">
+        <div class="row d-lg-flex justify-content-between align-items-center banner-hipmi">
+            <div class="col-md-11 col-lg-11 col-xl-11  mx-lg-11 my-11" id="bottom">
+                <div class="container-banner">
+                    <div class="caption-hipmi">HIPMI KOTA BANDUNG
+                    </div>
+                    <div class="caption-utama-new">
+                        Organisasi Pengusaha Terbesar di Indonesia
+                    </div>
+                    <p class="sub-caption-utama  pe-lg-0">Berdiri sejak 1972, HIPMI menjadi tempat berhimpun bagi
+                        pengusaha muda Indonesia untuk berjejaring dan memberikan dampak terhadap masyarakat luas. Mari
+                        bergabung bersama kami HIPMI Kota Bandung.</p>
+                    <button onclick="window.location.replace('{{ route('keanggotaan') }}','_blank')"
+                        class="btn mt-7 btn btn-green" id="btn-yellow" type="button">
+                        <p class="subtitle-custom text-center" style="color: #FFFFFF; margin-top: 20px; font-weight: bold">
+                            Sejarah
+                            Terbentuk</p>
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-md-1 col-lg-1 col-xl-1">
+
+            </div>
+            <!--/column -->
+
+            <!--/column -->
+        </div>
+        <!--/.row -->
+    </section>
+    <!-- /section -->
+    <section class="wrapper background-white">
+        <div class="container pt-10 pb-14 pt-md-7 pb-md-15" id="section">
+            <div class="row align-items-center sejak-background">
+                <div class="col-md-4 sejak-position" style="margin-top: 24px" id="b">
+                    <h2 class="sejak-style">Sejak 2016</h2>
+                    <p class="mb-10 subtitle-custom" id="p">HIPMI Kota Bandung telah terbentuk sejak tahun 2016.</p>
+                    {{-- <a href="{{ route('tentangkami') }}" class="text-succes " id="href">Baca sejarah terbentuk</a> --}}
+                </div>
+                <div class="col-md-8 sejak-count">
+                    <div class="row bg-green p-7 text-center" style="margin-right: 24px" id="m0">
+                        <div class="col-lg-4" id="line-after-div">
+                            <h2 class="sejak-style" style="color: #FFFFFF">{{ $count_katalog }}</h2>
+                            <p class="subtitle-custom" style="color: #FFFFFF">Perusahaan Anggota</p>
+                        </div>
+                        <div class="col-lg-4" id="line-after-div">
+                            <h2 class="sejak-style" style="color: #FFFFFF">{{ $count_master_bidang_usaha }}</h2>
+                            <p class="subtitle-custom" style="color: #FFFFFF">Klasifikasi Usaha</p>
+                        </div>
+                        <div class="col-lg-4" id="line-after-div2">
+                            <h2 class="sejak-style" style="color: #FFFFFF">{{ $count_pengurus }}</h2>
+                            <p class="subtitle-custom" style="color: #FFFFFF">Pengurus</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section class="wrapper bg-white elipse">
+        <div class="container-fluid pt-10 pb-14 pt-md-10 pb-md-12">
+            <div class="row gx-md-8 gx-xl-12 gy-10 align-items-center text-center ">
+                <h2 class="title-section">Anggota Hipmi<br>Kota Bandung</h2>
+                <div class="d-flex justify-content-center mt-0">
+                    <div class="col-lg-7">
+
+                        <p class="sub-caption-utama-dark">Berikut adalah perusahaan – perusahaan yang telah berhimpun di
+                            HIPMI
+                            Kota Bandung.
+                        </p>
+                        <button onclick="window.location.replace('{{ route('ekatalog') }}','_blank')" type="button"
+                            class="btn btn-success btn-green px-5" style="width: auto!important;">
+                            <p class="subtitle-custom text-center"
+                                style="color: #FFFFFF; margin-top: 20px; font-weight: bold">
+                                Lihat Daftar
+                                Perusahaan</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row d-flex justify-content-center mt-15" id="grid-ktl">
+                {{-- start loop --}}
+                @foreach ($katalog as $var)
+                    <div class="col-lg-2 col-md-6 col-sm-6 box-katalog"
+                        onclick="window.location.replace('{{ route('detailekatalog', $var['id']) }}','_blank')">
+                        <div class="box-img p-0"
+                            style="background-image: url({{ asset('storage/image/katalog/' . $var['logo']) }});background-size: contain;">
+                        </div>
+                        <div class="box-text  ps-2 pe-2" id="box-caption">
+                            <p class="text-left" id="caption-katalog">{{ $var['nama_katalog'] }}</p>
+                        </div>
+                        <div class="col-lg-12 p-0" id="box-desc">
+                            <div class="col-12 ps-3 pe-3 pt-2 pb-2 mb-2 jenis-perusahaan">
+                                {{ $var->Master_bidang_usaha['bidang_usaha'] }}
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+                {{-- end loop --}}
+            </div>
+            <!--/.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <section class="pt-10 pb-10 pt-md-10 pb-md-10">
+        <div class="container mt-10 mb-10">
+            <div class="row">
+                <div class="col-sm-2 col-md-4   box-ig text-center p-2"
+                    onclick="window.location.replace('https://www.instagram.com/hipmi.bdg/')">
+                    <img src="{{ asset('assets/img/ig/ig (2).png') }}" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-2 col-md-4 box-ig text-center p-2"
+                    onclick="window.location.replace('https://www.instagram.com/hipmi.bdg/')">
+                    <img src="{{ asset('assets/img/ig/ig (1).png') }}" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-2 col-md-4 box-ig text-center p-2"
+                    onclick="window.location.replace('https://www.instagram.com/hipmi.bdg/')">
+                    <img src="{{ asset('assets/img/ig/ig (6).png') }}" alt="" class="img-fluid">
+                </div>
+
+                <div class="col-sm-2 col-md-4 box-ig text-center p-2"
+                    onclick="window.location.replace('https://www.instagram.com/hipmi.bdg/')">
+                    <img src="{{ asset('assets/img/ig/ig (5).png') }}" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-2 col-md-4 box-ig text-center p-2"
+                    onclick="window.location.replace('https://www.instagram.com/hipmi.bdg/')">
+                    <img src="{{ asset('assets/img/ig/ig (4).png') }}" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-2 col-md-4 box-ig text-center p-2"
+                    onclick="window.location.replace('https://www.instagram.com/hipmi.bdg/')">
+                    <img src="{{ asset('assets/img/ig/ig (3).png') }}" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-join">
+        <div class="container-fluid pt-10 pb-10 pt-md-10 pb-md-10">
+            <div class="row gx-md-8 gx-xl-12 gy-10 align-items-center text-center">
+                <h3 class="title-join">Tertarik Menjadi Bagian<br>dari HIPMI Kota Bandung?</h3>
+                <div class="">
+                    <button onclick="window.location.replace('{{ route('keanggotaan') }}','_blank')"
+                        class="btn btn btn-success btn-join" type="button">
+                        <p class="subtitle-custom text-center"
+                            style="color: #FFFFFF; margin-top: 20px; font-weight: bold">
+                            Daftar Menjadi Anggota</p>
+                    </button>
+                </div>
+            </div>
+            <!--/.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- /section -->
+    <section class="wrapper bg-white">
+        <div class="container py-14 py-md-16 text-center">
+            <div class="row">
+                <iframe style="border-radius: 30px;"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.7671408771876!2d107.60752911449985!3d-6.918418469636028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e62ff87d38a3%3A0xc5b8736987935ecd!2sJl.%20Braga%20No.36%2C%20Braga%2C%20Kec.%20Sumur%20Bandung%2C%20Kota%20Bandung%2C%20Jawa%20Barat%2040111!5e0!3m2!1sid!2sid!4v1658116293183!5m2!1sid!2sid"
+                    width="500" height="450" style="border:0; margin: 0px 24px" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /section -->
+@endsection
+
+@section('css-inner')
+    <style>
+        .motobg {
+            background-image: url("{{ asset('assets/img/bg-tentang-moto.png') }}");
+        }
+
+        .banner-hipmi {
+            background-image: linear-gradient(0deg, rgba(0, 53, 24, 0.9), rgba(0, 53, 24, 0.9)), url("{{ asset('/image/banner/20220425-DSC00550.jpg') }}");
+        }
+
+        .elipse {
+            background-image: url("{{ asset('assets/img/elipse (1).png') }}");
+            background-position: top center;
+            background-repeat: no-repeat;
+        }
+    </style>
+@endsection
+
+@section('js')
+    <script>
+        $(document).ready(function() {
+            let width = window.screen.width;
+        });
+    </script>
+@endsection
