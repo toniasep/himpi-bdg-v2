@@ -112,4 +112,41 @@ class PenggunaController extends Controller
         return view('admin.index');
     }
 
+    public function edit_akun()
+   {
+        //get id user login
+        $id = auth()->user()->id;
+       $result = User::where('id', $id)->first();
+       return view('anggota.akun.edit', compact('result', $result));
+   }
+   public function update_akun(Request $request, $id)
+   {
+       $validator = Validator::make($request->all(), [
+           'email' => 'email|required|max:255',
+           'role' => 'required',
+           'name' => 'required|max:100',
+           'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:1048'
+       ]);
+       if ($validator->fails()) {
+           return redirect()->route('anggota.edit_akun')
+               ->withErrors($validator)
+               ->withInput();
+       }
+       $file_uploaded = null; 
+       $akun = User::find($id);
+       $akun->name = $request->name;
+       $akun->email = $request->email;
+       $akun->password = Hash::make($request->password);
+       $akun->role = $request->role;
+       if ($request->hasFile('photo')) { 
+           $path = 'public/image/pengguna'; 
+           $photo_name = 'pengguna-' . time() . '.' . request()->photo->getClientOriginalExtension(); 
+           $request->file('photo')->storeAs($path, $photo_name,['disk' => 'public_uploads']); 
+           $file_uploaded = $photo_name; 
+           $akun->photo = $file_uploaded;
+       }
+       $akun->save();
+       return redirect()->route('anggota.edit_akun')->with(['message' => 'Data berhasil Di Update!', 'error' => 'success']);
+   }
+
 }

@@ -99,7 +99,8 @@ Route::group(['prefix' => 'anggota', 'middleware' => ['web', 'auth', 'anggota']]
     Route::get('tolak/{id}', 'HomeController@tolak')->name('tolak');
     // Route::resource('pengguna', 'PenggunaController');
     //get only edit 
-    // Route::get('pengguna/{id}/edit', 'PenggunaController@edit')->name('pengguna.edit');
+    Route::get('akun/edit', 'PenggunaController@edit_akun')->name('anggota.edit_akun');
+    Route::put('akun/update/{id}', 'PenggunaController@update_akun')->name('anggota.update_akun');
     
     Route::resource('katalog', 'KatalogAnggotaController');
     Route::resource('brand', 'BrandAnggotaController');
