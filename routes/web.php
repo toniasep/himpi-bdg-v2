@@ -94,6 +94,8 @@ Route::group(['prefix' => 'manajemen', 'middleware' => ['web', 'auth', 'admin']]
 });
 
 Route::group(['prefix' => 'anggota', 'middleware' => ['web', 'auth', 'anggota']], function () {
+    Route::resource('katalog', 'KatalogAnggotaController');
+    Route::resource('brand', 'BrandAnggotaController');
     Route::get('/', 'HomeController@anggota')->name('anggota');
     Route::get('setuju/{id}', 'HomeController@setuju')->name('setuju');
     Route::get('tolak/{id}', 'HomeController@tolak')->name('tolak');
@@ -102,7 +104,5 @@ Route::group(['prefix' => 'anggota', 'middleware' => ['web', 'auth', 'anggota']]
     Route::get('akun/edit', 'PenggunaController@edit_akun')->name('anggota.edit_akun');
     Route::put('akun/update/{id}', 'PenggunaController@update_akun')->name('anggota.update_akun');
     
-    Route::resource('katalog', 'KatalogAnggotaController');
-    Route::resource('brand', 'BrandAnggotaController');
 
 });

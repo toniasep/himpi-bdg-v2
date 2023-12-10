@@ -35,8 +35,8 @@
                                 <td>{{ $key + 1 }}</td>
                                 {{-- <td> <img src="{{url('image/katalog')}}/{{$item['logo']}}" alt="{{$item['nama_katalog']}}"
                                 class="img-fluid w-100"> </td> --}}
-                                <td><img alt="Logo" src="{{ url('storage/image/katalog') }}/{{ $item['logo'] }}"
-                                        class="img-fluid  w-100" /></td>
+                                <td><img alt="Logo" src="{{ url('image/logo') }}/{{ $item['logo'] }}"
+                                        class="img-fluid" style="width: 50px" /></td>
                                 <td>{{ $item['nama_katalog'] }}</td>
                                 <td>{{ $item['alamat'] }}</td>
                                 <td>{{ $item->User['name'] }}</td>

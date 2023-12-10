@@ -6,6 +6,7 @@ use App\Bidang_usaha;
 use App\User;
 use App\Katalog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class KatalogAnggotaController extends Controller
 {
@@ -97,29 +98,30 @@ class KatalogAnggotaController extends Controller
     {
         $result = Katalog::where('id', $id)->first();
         $master_bidang_usaha = Master_bidang_usaha::all();
-        $pengguna = User::where('role','anggota')->get();
+        $pengguna = User::where('id', Auth::id())->get();
         return view('anggota.katalog.edit', compact('result', $result,'master_bidang_usaha', $master_bidang_usaha,'pengguna', $pengguna));
     }
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            'nama_katalog' => 'required',
-            'deskripsi' => 'required',
-            'alamat' => 'required',
-            'nama_pemilik' => 'required',
-            'no_pemilik' => 'required',
-            'email_pemilik' => 'required',
-            'facebook' => 'max:255',
-            'instagram' => 'max:255',
-            'twitter' => 'max:255',
-            'youtube' => 'max:255',
-            'logo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:1048',
-            'master_bidang_usaha_id' => 'required',
-            'user_id' => 'required',
-            'cv' => 'required'
-        ]);
-            $file_uploaded = null; 
+        // $this->validate($request, [
+        //     'nama_katalog' => 'required',
+        //     'deskripsi' => 'required',
+        //     'alamat' => 'required',
+        //     'nama_pemilik' => 'required',
+        //     'no_pemilik' => 'required',
+        //     'email_pemilik' => 'required',
+        //     'facebook' => 'max:255',
+        //     'instagram' => 'max:255',
+        //     'twitter' => 'max:255',
+        //     'youtube' => 'max:255',
+        //     'logo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:1048',
+        //     'master_bidang_usaha_id' => 'required',
+        //     'user_id' => 'required',
+        //     'cv' => 'required'
+        // ]);
             $katalog = Katalog::find($id);
+            // dd($katalog);
+            $file_uploaded = null; 
             $katalog->nama_katalog = $request->nama_katalog;
             $katalog->deskripsi = $request->deskripsi;
             $katalog->alamat = $request->alamat;
@@ -142,13 +144,13 @@ class KatalogAnggotaController extends Controller
             if ($request->hasFile('logo')) { 
                 $path = 'public/image/katalog'; 
                 $logo_name = 'HIPMI-Bandung(Himpunan-Pengusaha-Muda-Indonesia-Bandung)' . time() . '.' . request()->logo->getClientOriginalExtension(); 
-                $request->file('logo')->storeAs($path, $logo_name,['disk' => 'public_uploads']); 
+                // $request->file('logo')->storeAs($path, $logo_name,['disk' => 'public_uploads']); 
+                $request->logo->move(public_path('image/logo'), $logo_name);
                 $file_uploaded = $logo_name; 
                 $katalog->logo = $file_uploaded;
             }        
             $katalog->save();
-            $katalog->save();
-        return redirect()->route('katalog.index')->with(['message' => 'Data berhasil Di Update!', 'error' => 'success']);
+        return redirect()->route('katalog.index')->with(['message' => 'Data berhasil Di Update!!', 'error' => 'success']);
     }
 
     public function destroy($id)

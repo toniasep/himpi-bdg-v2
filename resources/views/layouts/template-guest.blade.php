@@ -99,16 +99,16 @@
                                     </li> --}}
                                     <li class="nav-item dropdown">
                                         <a class="nav-link  dropdown-toggle" href="#"><img
-                                                style="color: {{ request()->is('/') ? '' : '#111827' }} "
-                                                src="{{ asset('storage/image/pengguna') }}/{{ Auth::user()->photo }}"
+                                                style="width: 20px; color: {{ request()->is('/') ? '' : '#111827' }} "
+                                                src="{{ asset('image/pengguna') }}/{{ Auth::user()->photo }}"
                                                 alt="" class="img-fluid ">
                                             </i></a>
                                         <ul class="dropdown-menu">
                                             {{-- <li class="nav-item"><a class="dropdown-item" href="#"></a></li> --}}
                                             <li class="nav-item"><a class="dropdown-item"
-                                                    href="">Akun</a></li>
+                                                    href="{{ route('anggota.edit_akun') }}">Akun</a></li>
                                             <li class="nav-item"><a class="dropdown-item"
-                                                    href="">Katalog</a></li>
+                                                    href="/anggota/katalog">Katalog</a></li>
                                             {{-- <li class="nav-item"><a class="dropdown-item"
                                                     href="{{ route('anggota') }}">Partnership</a></li> --}}
                                             <li>

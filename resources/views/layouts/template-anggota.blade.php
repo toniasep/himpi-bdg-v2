@@ -555,7 +555,7 @@
                                     data-kt-menu-trigger="click" data-kt-menu-attach="parent"
                                     data-kt-menu-placement="bottom-end" data-kt-menu-flip="bottom">
                                     <img alt="Pic"
-                                        src="{{ url('storage/image/pengguna') }}/{{ Auth::user()->photo }}" />
+                                        src="{{ asset('image/pengguna') }}/{{ Auth::user()->photo }}" />
                                 </div>
                                 <!--begin::Menu-->
                                 <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold py-4 fs-6 w-275px"
@@ -566,7 +566,7 @@
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-50px symbol-circle me-5">
                                                 <img alt="Logo"
-                                                    src="{{ url('storage/image/pengguna') }}/{{ Auth::user()->photo }}" />
+                                                    src="{{ asset('image/pengguna') }}/{{ Auth::user()->photo }}" />
                                             </div>
                                             <!--end::Avatar-->
                                             <!--begin::Username-->
@@ -590,7 +590,10 @@
                                     <!--end::Menu separator-->
                                     <!--begin::Menu item-->
                                     <div class="menu-item px-5">
-                                        <a href="{{ route('akun') }}" class="menu-link px-5">Akun Saya</a>
+                                        <a href="{{ route('anggota.edit_akun') }}" class="menu-link px-5">Akun Saya</a>
+                                    </div>
+                                    <div class="menu-item px-5">
+                                        <a href="{{ route('beranda') }}" class="menu-link px-5">Beranda</a>
                                     </div>
                                     <!--end::Menu item-->
                                     <!--begin::Menu separator-->
