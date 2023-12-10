@@ -141,7 +141,8 @@ class PenggunaController extends Controller
        if ($request->hasFile('photo')) { 
            $path = 'public/image/pengguna'; 
            $photo_name = 'pengguna-' . time() . '.' . request()->photo->getClientOriginalExtension(); 
-           $request->file('photo')->storeAs($path, $photo_name,['disk' => 'public_uploads']); 
+        //    $request->file('photo')->storeAs($path, $photo_name,['disk' => 'public_uploads']);
+            $request->photo->move(public_path('image/pengguna'), $photo_name);
            $file_uploaded = $photo_name; 
            $akun->photo = $file_uploaded;
        }
