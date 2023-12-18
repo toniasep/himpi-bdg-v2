@@ -33,7 +33,8 @@ Ubah Data Pengguna
                                 data-kt-image-input="true"
                                 style="background-image: url(/assets/media/svg/avatars/blank.svg)">
                                 <!--begin::Image preview wrapper-->
-                                <div class="image-input-wrapper w-125px h-125px" style="background-image: url(../assets/media/avatars/150-1.jpg)"></div>
+                                {{-- <div class="image-input-wrapper w-125px h-125px" style="background-image: url(../assets/media/avatars/150-1.jpg)"></div> --}}
+                                <div class="image-input-wrapper w-125px h-125px" style="background-image: url('{{ url('image/pengguna/' . $result["photo"]) }}')"></div>
                                 {{-- <div class="image-input-wrapper w-125px h-125px"></div> --}}
                                 <!--end::Image preview wrapper-->
 

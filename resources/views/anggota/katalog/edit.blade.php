@@ -10,7 +10,7 @@
         <!-- /.card-header -->
         <div class="card-body">
             <div class="container py-5 rounded border p-10 row">
-                <form action="{{ route('katalog.update', $result['id']) }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('katalog-pengguna.update', $result['id']) }}" method="post" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     {{ method_field('PUT') }}
                     <div class="row mb-6">
@@ -179,7 +179,7 @@
             </div>
             <div class="d-flex flex-stack pt-8">
                 <div class="">
-                    <a class="btn btn-light" href="{{ route('katalog.index') }}"><i class="fa fa-arrow-left mr-2"></i>
+                    <a class="btn btn-light" href="{{ route('katalog-pengguna.index') }}"><i class="fa fa-arrow-left mr-2"></i>
                         Kembali
                     </a>
                 </div>

@@ -48,13 +48,15 @@ class BrandAnggotaController extends Controller
         if ($request->hasFile('logo_brand')) { 
             $path = 'public/image/brand'; 
             $logo_brand_name = 'HIPMI-Bandung(Himpunan-Pengusaha-Muda-Indonesia-Bandung)-Brand-' . time() . '.' . request()->logo_brand->getClientOriginalExtension(); 
-            $request->file('logo_brand')->storeAs($path, $logo_brand_name,['disk' => 'public_uploads']); 
+            // $request->file('logo_brand')->storeAs($path, $logo_brand_name,['disk' => 'public_uploads']); 
+            
+            $request->logo_brand->move(public_path('image/brand'), $logo_brand_name);
             $file_uploaded = $logo_brand_name; 
             $akun->logo_brand = $file_uploaded;
         }
         $akun->save();
 
-        return redirect()->route('brand.index')->with(['message' => 'Data berhasil Ditambah!', 'error' => 'success']);
+        return redirect()->route('brand-pengguna.index')->with(['message' => 'Data berhasil Ditambah!', 'error' => 'success']);
     }
 
     public function show($id)
@@ -86,19 +88,21 @@ class BrandAnggotaController extends Controller
         if ($request->hasFile('logo_brand')) { 
             $path = 'public/image/brand'; 
             $logo_brand_name = 'HIPMI-Bandung(Himpunan-Pengusaha-Muda-Indonesia-Bandung)-Brand-' . time() . '.' . request()->logo_brand->getClientOriginalExtension(); 
-            $request->file('logo_brand')->storeAs($path, $logo_brand_name,['disk' => 'public_uploads']); 
+            // $request->file('logo_brand')->storeAs($path, $logo_brand_name,['disk' => 'public_uploads']); 
+            $request->logo_brand->move(public_path('image/brand'), $logo_brand_name);
+
             $file_uploaded = $logo_brand_name; 
             $akun->logo_brand = $file_uploaded;
         }
         $akun->save();
 
-        return redirect()->route('brand.index')->with(['message' => 'Data Pasien berhasil Di Update!', 'error' => 'success']);
+        return redirect()->route('brand-pengguna.index')->with(['message' => 'Data Pasien berhasil Di Update!', 'error' => 'success']);
     }
 
     public function destroy($id)
     {
         $result = Brand::where('id', $id)->first();
         $result->delete();
-        return redirect()->route('brand.index')->with(['message' => 'Data Pasien berhasil Dihapus!', 'error' => 'success']);
+        return redirect()->route('brand-pengguna.index')->with(['message' => 'Data Pasien berhasil Dihapus!', 'error' => 'success']);
     }
 }

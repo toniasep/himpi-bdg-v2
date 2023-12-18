@@ -133,7 +133,7 @@
                             </div> --}}
                             <div class="menu-item mb-1">
                                 <a class="menu-link {{ Route::is('katalog*') ? 'active' : '' }}"
-                                    href="{{ route('katalog.index') }}" title="Katalog" data-bs-toggle="tooltip"
+                                    href="{{ route('katalog-pengguna.index') }}" title="Katalog" data-bs-toggle="tooltip"
                                     data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                                     <span class="menu-icon">
                                         <!--begin::Svg Icon | path: icons/duotone/Layout/Layout-arrange.svg-->
@@ -161,7 +161,7 @@
                             </div>
                             <div class="menu-item mb-1">
                                 <a class="menu-link {{ Route::is('brand.index') ? 'active' : '' }}"
-                                    href="{{ route('brand.index') }}" title="Data Brand" data-bs-toggle="tooltip"
+                                    href="{{ route('brand-pengguna.index') }}" title="Data Brand" data-bs-toggle="tooltip"
                                     data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                                     <span class="menu-icon">
                                         <!--begin::Svg Icon | path: icons/duotone/Layout/Layout-arrange.svg-->

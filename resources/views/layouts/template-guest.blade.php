@@ -108,7 +108,7 @@
                                             <li class="nav-item"><a class="dropdown-item"
                                                     href="{{ route('anggota.edit_akun') }}">Akun</a></li>
                                             <li class="nav-item"><a class="dropdown-item"
-                                                    href="/anggota/katalog">Katalog</a></li>
+                                                    href="/anggota/katalog-pengguna">Katalog</a></li>
                                             {{-- <li class="nav-item"><a class="dropdown-item"
                                                     href="{{ route('anggota') }}">Partnership</a></li> --}}
                                             <li>

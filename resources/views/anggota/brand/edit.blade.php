@@ -11,7 +11,7 @@ Ubah Data Brand
     <!-- /.card-header -->
     <div class="card-body">
         <div class="container py-5 rounded border p-10 row">
-            <form action="{{route('brand.update', $result['id'])}}" method="post" enctype="multipart/form-data">
+            <form action="{{route('brand-pengguna.update', $result['id'])}}" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 {{ method_field('PUT') }}
                 <div class="row">
@@ -76,7 +76,7 @@ Ubah Data Brand
         </div>
         <div class="d-flex flex-stack pt-8">
             <div class="">
-                <a class="btn btn-light" href="{{route('brand.index')}}"><i class="fa fa-arrow-left mr-2"></i> Kembali
+                <a class="btn btn-light" href="{{route('brand-pengguna.index')}}"><i class="fa fa-arrow-left mr-2"></i> Kembali
                 </a>
             </div>
             <div class="">

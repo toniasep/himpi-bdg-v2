@@ -11,7 +11,7 @@
                 <div class="card-title m-0">
                     <h3 class="fw-bolder fs-6 m-0">Data Katalog</h3>
                 </div>
-                <a href="{{ route('katalog.create') }}" type="button" class="align-self-center  btn btn-sm btn-primary ">
+                <a href="{{ route('katalog-pengguna.create') }}" type="button" class="align-self-center  btn btn-sm btn-primary ">
                     <i class="fas fa-plus" aria-hidden="true"></i> Tambah Katalog
                 </a>
             </div>
@@ -40,7 +40,7 @@
                                 <td>{{ $item['nama_katalog'] }}</td>
                                 <td>{{ $item['alamat'] }}</td>
                                 <td>{{ $item->User['name'] }}</td>
-                                <form action="{{ route('katalog.destroy', $item['id']) }}" method="post">
+                                <form action="{{ route('katalog-pengguna.destroy', $item['id']) }}" method="post">
                                     <td style="width: 38%">
 
                                         <a class="btn btn-outline btn-outline btn-outline-primary btn-sm btn-active-light-primary font-16 pl-2 addAttr"
@@ -59,7 +59,7 @@
                                             <i class="far fa-eye text-primary"></i>Lihat</a>
 
                                         <a class="btn btn-outline btn-outline btn-outline-primary btn-sm btn-active-light-primary font-16 pl-2"
-                                            href="{{ route('katalog.edit', $item['id']) }}">
+                                            href="{{ route('katalog-pengguna.edit', $item['id']) }}">
                                             <i class="far fa-edit text-primary"></i> Ubah</a>
 
                                         <button type="submit"
@@ -114,7 +114,7 @@
                 <!--begin::Modal body-->
                 <div class="modal-body my-1">
                     <div class="container py-5 rounded border p-10 row">
-                        <form action="{{ route('katalog.store') }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('katalog-pengguna.store') }}" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <div class="row">
                                 <div class="col-12 mb-10">

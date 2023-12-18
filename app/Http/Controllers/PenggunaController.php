@@ -16,7 +16,8 @@ class PenggunaController extends Controller
 
     public function index()
     {
-        $result = User::all();
+        // sort by date
+        $result = User::all()->sortByDesc('id');
         $log = Activity_log::all();
         // $query= DB::table('users')
         //         ->join('users', 'users.id', '=', 'users.id')
@@ -54,10 +55,13 @@ class PenggunaController extends Controller
         $akun->email_verified_at = now();
         $akun->password = Hash::make($request->password);
         $akun->role = $request->role;
+        // $akun->kta = $request->kta;
         if ($request->hasFile('photo')) { 
             $path = 'public/image/pengguna'; 
             $photo_name = 'pengguna-' . time() . '.' . request()->photo->getClientOriginalExtension(); 
-            $request->file('photo')->storeAs($path, $photo_name,['disk' => 'public_uploads']); 
+            // $request->file('photo')->storeAs($path, $photo_name,['disk' => 'public_uploads']); 
+            
+            $request->photo->move(public_path('image/pengguna'), $photo_name);
             $file_uploaded = $photo_name; 
             $akun->photo = $file_uploaded;
         }
@@ -79,7 +83,7 @@ class PenggunaController extends Controller
             'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:1048'
         ]);
         if ($validator->fails()) {
-            return redirect()->route('pengguna.index')
+            return redirect()->route('pengguna.edit', $id)
                 ->withErrors($validator)
                 ->withInput();
         }
@@ -92,7 +96,8 @@ class PenggunaController extends Controller
         if ($request->hasFile('photo')) { 
             $path = 'public/image/pengguna'; 
             $photo_name = 'pengguna-' . time() . '.' . request()->photo->getClientOriginalExtension(); 
-            $request->file('photo')->storeAs($path, $photo_name,['disk' => 'public_uploads']); 
+            // $request->file('photo')->storeAs($path, $photo_name,['disk' => 'public_uploads']); 
+            $request->photo->move(public_path('image/pengguna'), $photo_name);
             $file_uploaded = $photo_name; 
             $akun->photo = $file_uploaded;
         }
@@ -128,7 +133,7 @@ class PenggunaController extends Controller
            'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:1048'
        ]);
        if ($validator->fails()) {
-           return redirect()->route('anggota.edit_akun')
+           return redirect()->route('anggota.edit_akun', $id)
                ->withErrors($validator)
                ->withInput();
        }

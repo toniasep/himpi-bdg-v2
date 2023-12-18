@@ -87,7 +87,7 @@ class KatalogAnggotaController extends Controller
             $katalog->logo = $file_uploaded;
         }        
         $katalog->save();
-        return redirect()->route('katalog.index')->with(['message' => 'Data berhasil Ditambah!', 'error' => 'success']);
+        return redirect()->route('katalog-pengguna.index')->with(['message' => 'Data berhasil Ditambah!', 'error' => 'success']);
     }
 
     public function show($id)
@@ -150,13 +150,13 @@ class KatalogAnggotaController extends Controller
                 $katalog->logo = $file_uploaded;
             }        
             $katalog->save();
-        return redirect()->route('katalog.index')->with(['message' => 'Data berhasil Di Update!!', 'error' => 'success']);
+        return redirect()->route('katalog-pengguna.index')->with(['message' => 'Data berhasil Di Update!!', 'error' => 'success']);
     }
 
     public function destroy($id)
     {
         $result = Katalog::where('id', $id)->first();
         $result->delete();
-        return redirect()->route('katalog.index')->with(['message' => 'Data berhasil Dihapus!', 'error' => 'success']);
+        return redirect()->route('katalog-pengguna.index')->with(['message' => 'Data berhasil Dihapus!', 'error' => 'success']);
     }
 }

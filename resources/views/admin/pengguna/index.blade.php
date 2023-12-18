@@ -33,7 +33,7 @@
                         @foreach ($result as $key => $item)
                             <tr>
                                 <td>{{ $key + 1 }}</td>
-                                <td><img alt="Logo" src="{{ url('storage/image/pengguna') }}/{{ $item['photo'] }}"
+                                <td><img alt="Logo" src="{{ asset('image/pengguna') }}/{{ $item['photo'] }}"
                                         class="img-fluid w-100" /></td>
                                 <td class="fw-bolder">{{ $item['name'] }}</td>
                                 <td>{{ $item['email'] }}</td>
@@ -370,6 +370,9 @@
             $('#empat').text(empat);
             $('#created_at').text(created_at);
             $('#updated_at').text(updated_at);
+
+            
         });
+
     </script>
 @endsection

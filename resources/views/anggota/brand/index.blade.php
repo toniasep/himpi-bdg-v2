@@ -11,7 +11,7 @@
                 <div class="card-title m-0">
                     <h3 class="fw-bolder fs-6 m-0">Data Brand Aktif</h3>
                 </div>
-                <a data-bs-toggle="modal" data-bs-target="#create_brand" href="{{ route('brand.create') }}" type="button"
+                <a data-bs-toggle="modal" data-bs-target="#create_brand" href="{{ route('brand-pengguna.create') }}" type="button"
                     class="align-self-center  btn btn-sm btn-primary "><i class="fas fa-plus" aria-hidden="true"></i> Tambah
                     Brand</a>
             </div>
@@ -32,12 +32,12 @@
                         @foreach ($result as $key => $item)
                             <tr>
                                 <td>{{ $key + 1 }}</td>
-                                <td><img alt="Logo" src="{{ url('storage/image/brand') }}/{{ $item['logo_brand'] }}"
+                                <td><img alt="Logo" style="width: 50px" src="{{ asset('image/brand') }}/{{ $item['logo_brand'] }}"
                                         class="img-fluid " /></td>
                                 </td>
                                 <td>{{ $item['nama_brand'] }}</td>
                                 <td>{{ $item->Katalog['nama_katalog'] }}</td>
-                                <form action="{{ route('brand.destroy', $item['id']) }}" method="post">
+                                <form action="{{ route('brand-pengguna.destroy', $item['id']) }}" method="post">
                                     <td style="width: 38%">
 
                                         <a class="btn btn-outline btn-outline btn-outline-primary btn-sm btn-active-light-primary font-16 pl-2 addAttr"
@@ -50,7 +50,7 @@
                                             <i class="far fa-eye text-primary"></i>Lihat</a>
 
                                         <a class="btn btn-outline btn-outline btn-outline-primary btn-sm btn-active-light-primary font-16 pl-2"
-                                            href="{{ route('brand.edit', $item['id']) }}">
+                                            href="{{ route('brand-pengguna.edit', $item['id']) }}">
                                             <i class="far fa-edit text-primary"></i> Ubah</a>
 
                                         <button type="submit"
@@ -105,7 +105,7 @@
                 <!--begin::Modal body-->
                 <div class="modal-body my-1">
                     <div class="container py-5 rounded border p-10 row">
-                        <form action="{{ route('brand.store') }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('brand-pengguna.store') }}" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <div class="row">
                                 <div class="col-12 mb-10">

@@ -46,7 +46,7 @@ Tambah Data Katalog
     </div>
     <!-- /.card-header -->
     <div class="card-body">
-        <form action="{{route('katalog.store')}}" method="post" enctype="multipart/form-data">
+        <form action="{{route('katalog-pengguna.store')}}" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
             @if(count($errors)>0)
                 <ul>
