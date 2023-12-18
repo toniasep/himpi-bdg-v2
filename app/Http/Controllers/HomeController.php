@@ -26,14 +26,37 @@ use Mail;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $count_katalog = Katalog::count();
         $count_master_bidang_usaha = Master_bidang_usaha::count();
         $count_pengurus = User::where('role', 'pengurus')->count();
         $katalog = Katalog::orderBy('kerjasama_count','desc')->limit(15)->get();
         $slider = Slider::where('kategori', 'slider')->inRandomOrder()->get();
-        return view('index',compact('katalog','count_katalog','count_master_bidang_usaha','count_pengurus','slider'));
+        if(is_null($request->q)){
+            $anggota = null; 
+            $perusahaan = "-";
+        }else{
+            $anggota = User::where('role', 'anggota')->where('kta', "{$request->q}")->get();
+            // dd($anggota->count());
+            if($anggota->count() == 0){
+                $anggota = "not found";
+                $perusahaan = "-";
+            }else{
+                //get list name katalog from user id
+                $katalogs = Katalog::where('user_id',$anggota[0]['id'])->get();
+                if(count($katalogs) == 0){
+                    $perusahaan = "-";
+                }else{
+                    $katalogs = Katalog::where('user_id',$anggota[0]['id'])->pluck('nama_katalog');
+                    //make like this "katalog1, katalog2, katalog3"
+                    $perusahaan = implode(", ", $katalogs->toArray());
+                }
+            }
+
+        }
+
+        return view('index',compact('katalog','count_katalog','count_master_bidang_usaha','count_pengurus','slider', 'anggota', 'perusahaan'));
     }
     public function ekatalog(Request $request)
     {

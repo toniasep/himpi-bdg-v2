@@ -55,7 +55,7 @@ class PenggunaController extends Controller
         $akun->email_verified_at = now();
         $akun->password = Hash::make($request->password);
         $akun->role = $request->role;
-        // $akun->kta = $request->kta;
+        $akun->kta = $request->kta;
         if ($request->hasFile('photo')) { 
             $path = 'public/image/pengguna'; 
             $photo_name = 'pengguna-' . time() . '.' . request()->photo->getClientOriginalExtension(); 
@@ -93,6 +93,7 @@ class PenggunaController extends Controller
         $akun->email = $request->email;
         $akun->password = Hash::make($request->password);
         $akun->role = $request->role;
+        $akun->kta = $request->kta;
         if ($request->hasFile('photo')) { 
             $path = 'public/image/pengguna'; 
             $photo_name = 'pengguna-' . time() . '.' . request()->photo->getClientOriginalExtension(); 

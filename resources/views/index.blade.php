@@ -172,7 +172,76 @@
         <!-- /.container -->
     </section>
     <!-- /section -->
+    
+<section class="wrapper section-first  mt-14" id="cek_anggota">
+    <div class="">
+        <div class="row set-bg" style="--bs-gutter-x: 0;">
+            <div class="col-lg-12 htr-full ps-0 ps-sm-14 pe-0 pe-sm-11 pt-0 pt-sm-13 pb-0 pb-sm-13 col-12">
+                <div class="col-lg-6 p-0" id="mbl-pd-set">
+                    <h2 id="tk">CEK KEANGGOTAAN</h2>
+                </div>
+                <div class="col-lg-2" id="mbl-pd-set">
+                    <form class="" method="get" action="{{ route('beranda') }}#cek_anggota">
+                        <div class="input-group mb-3 mx-auto" id="box-searching">
+                            
+                            <div class="col-lg-10 col-10 p-0">
+                                <input type="text" name="q" value=""
+                                    class="form-control p-1" id="input-search"
+                                    aria-label="Ketik Kartu Tanda Anggota"
+                                    placeholder="Ketik Kartu Tanda Anggota">
+                            </div>
+                            <div class="col-lg-1 cold-md-1 col-sm-0 p-0">
+                            </div>
+                            <div class="col-lg-1 col-1 p-0">
+                                <button type="submit" class="input-group-text" id="btn-cari"> <span
+                                        id="icon-seach-green" class="mx-auto input-group-text"><i
+                                            class="uil uil-search text-white text-center"></i></span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-10">
+                    <div class="col-lg-6 p-0">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<?php
+// dd($anggota);
+if($anggota == "not found"){ ?>
+<section class="wrapper background-white">
+    <div class="container pt-10 pb-14 pt-md-7 pb-md-15" id="section">
+        <div class="row align-items-center sejak-background">
+            <div class="col-md-12 sejak-position text-center" style="margin-top: 24px" id="b">
+                <h2 class="sejak-style">KTA Tidak Terdaftar</h2>
+            </div>
+        </div>
+        <!--/.row -->
+    </div>
+    <!-- /.container -->
+</section>
+<?php }else if(!is_null($anggota)){ ?>
+<section class="wrapper background-white">
+    <div class="container pt-10 pb-14 pt-md-7 pb-md-15" id="section">
+        <div class="row align-items-center sejak-background">
+            <div class="col-md-12 sejak-position text-center" style="margin-top: 24px" id="b">
+                <h2 class="sejak-style">Anggota BPC Kota Bandung</h2>
+                <p class="mb-3 subtitle-custom" id="p"><b>Nama Lengkap</b> : {{ $anggota[0]['name'] }}</p>
+                <p class="mb-3 subtitle-custom" id="p"><b>KTA</b> : {{ substr_replace($anggota[0]['kta'], '****', -4) }}</p>
+                <p class="mb-3 subtitle-custom" id="p"><b>Perusahaan</b> : {{ $perusahaan }}</p>
+            </div>
+        </div>
+        <!--/.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<?php } ?>
+
 @endsection
+    
 
 @section('css-inner')
     <style>

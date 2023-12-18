@@ -120,6 +120,18 @@ Ubah Data Pengguna
                 </div>
                 <div class="row">
                     <div class="col-12 mb-10">
+                        <label class="form-label">KTA</label>
+                        <input type="text" class="form-control" name="kta"
+                            value="{{$result['kta']}}" placeholder="Masukan KTA" required="" />
+                        @if ($errors->has('kta'))
+                        <span class="help-block text-danger">
+                            <strong>{{ $errors->first('kta') }}</strong>
+                        </span>
+                        @endif
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 mb-10">
                         <label class="form-label">Kata Sandi</label>
                         <input type="password" class="form-control  @error('password') is-invalid @enderror"
                             name="password" value="" placeholder="Masukan Kata Sandi" />
