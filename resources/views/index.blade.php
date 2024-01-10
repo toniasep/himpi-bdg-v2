@@ -110,7 +110,7 @@
         </div>
         <!-- /.container -->
     </section>
-    <section class="pt-10 pb-10 pt-md-10 pb-md-10">
+    {{-- <section class="pt-10 pb-10 pt-md-10 pb-md-10">
         <div class="container mt-10 mb-10">
             <div class="row">
                 <div class="col-sm-2 col-md-4   box-ig text-center p-2"
@@ -140,7 +140,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <section class="section-join">
         <div class="container-fluid pt-10 pb-10 pt-md-10 pb-md-10">
             <div class="row gx-md-8 gx-xl-12 gy-10 align-items-center text-center">
