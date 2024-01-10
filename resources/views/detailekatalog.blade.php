@@ -31,7 +31,7 @@
                 <div class="mx-auto mx-lg-0 row frame-image d-flex align-items-center justify-content-center "
                     id="img-katalog">
                     <div class="box-img2 p-0">
-                        <img src="{{ asset('storage/image/katalog/') }}/{{ $var['logo'] }}" class="img-fluid" alt=""
+                        <img src="{{ asset('image/katalog/') }}/{{ $var['logo'] }}" class="img-fluid" alt=""
                             style="    border-radius: 27px;">
                     </div>
                 </div>
@@ -202,7 +202,7 @@
                         onclick="window.location.replace('{{ route('detailekatalog', $var['id']) }}','_blank')"
                         style="width: 32%;">
                         <div class="box-img2 p-0" style="">
-                            <img src="{{ asset('storage/image/katalog/') }}/{{ $var['logo'] }}" class="img-fluid"
+                            <img src="{{ asset('image/katalog/') }}/{{ $var['logo'] }}" class="img-fluid"
                                 alt="">
                         </div>
                         <div class="box-text p-0">

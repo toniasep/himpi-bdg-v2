@@ -39,7 +39,8 @@ class BanomController extends Controller
         if ($request->hasFile('logo')) { 
             $path = 'public/image/banom'; 
             $logo_name = 'Badan-Otonom-HIPMI-Bandung-' . time() . '.' . request()->logo->getClientOriginalExtension(); 
-            $request->file('logo')->storeAs($path, $logo_name,['disk' => 'public_uploads']); 
+            // $request->file('logo')->storeAs($path, $logo_name,['disk' => 'public_uploads']); 
+            $request->logo->move(public_path('image/banom'), $logo_name);
             $file_uploaded = $logo_name; 
             $banom->logo = $file_uploaded;
             $banom->judul = $request->judul;
@@ -72,13 +73,14 @@ class BanomController extends Controller
         if ($request->hasFile('logo')) { 
             $path = 'public/image/banom'; 
             $logo_name = 'Badan-Otonom-HIPMI-Bandung-' . time() . '.' . request()->logo->getClientOriginalExtension(); 
-            $request->file('logo')->storeAs($path, $logo_name,['disk' => 'public_uploads']); 
+            // $request->file('logo')->storeAs($path, $logo_name,['disk' => 'public_uploads']); 
+            $request->logo->move(public_path('image/banom'), $logo_name);
             $file_uploaded = $logo_name; 
             $banom->logo = $file_uploaded;
         }
         $banom->judul = $request->judul;
-            $banom->deskripsi_pendek = $request->deskripsi_pendek;
-            $banom->deskripsi = $request->deskripsi;
+        $banom->deskripsi_pendek = $request->deskripsi_pendek;
+        $banom->deskripsi = $request->deskripsi;
         $banom->save();
         return redirect()->route('banom.index')->with(['message' => 'Data berhasil Di Update!', 'error' => 'success']);
     }

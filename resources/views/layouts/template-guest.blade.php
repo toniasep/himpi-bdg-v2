@@ -206,7 +206,7 @@
                     <!-- /.widget -->
                 </div>
                 <!-- /column -->
-                <div class="col-md-4 col-lg-2 p-0">
+                <div class="col-md-3 col-lg-3 p-0">
                     <div class="widget">
                         <h4 class="footer-title">Kontak Kami</h4>
                         <ul class="list-unstyled mb-0">
@@ -228,7 +228,7 @@
                     <!-- /.widget -->
                 </div>
                 <!-- /column -->
-                <div class="col-md-4 col-lg-4 p-0">
+                <div class="col-md-3 col-lg-3 p-0">
                     <div class="widget">
                         <h4 class="footer-title">Sosial Media</h4>
                         <div class="nav social social-white">

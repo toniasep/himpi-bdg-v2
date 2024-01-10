@@ -92,7 +92,7 @@
                     <div class="col-lg-2 col-md-6 col-sm-6 box-katalog"
                         onclick="window.location.replace('{{ route('detailekatalog', $var['id']) }}','_blank')">
                         <div class="box-img p-0"
-                            style="background-image: url({{ asset('storage/image/katalog/' . $var['logo']) }});background-size: contain;">
+                            style="background-image: url({{ asset('image/katalog/' . $var['logo']) }});background-size: contain;">
                         </div>
                         <div class="box-text  ps-2 pe-2" id="box-caption">
                             <p class="text-left" id="caption-katalog">{{ $var['nama_katalog'] }}</p>

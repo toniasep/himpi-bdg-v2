@@ -64,7 +64,7 @@
                     <div class="col-lg-1 col-md-4 col-sm-6 box-katalog pb-3"
                         onclick="window.location.replace('{{ route('detailekatalog', $var['id']) }}','_blank')">
                         <div class="box-img2 p-0" style="">
-                            <img src="{{ asset('storage/image/katalog') }}/{{ $var['logo'] }}" class="img-fluid"
+                            <img src="{{ asset('image/katalog') }}/{{ $var['logo'] }}" class="img-fluid"
                                 alt="">
                         </div>
                         <div class="box-text  ps-2 pe-2" id="box-caption">

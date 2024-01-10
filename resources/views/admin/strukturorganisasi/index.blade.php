@@ -73,7 +73,7 @@
     <div class="card card mt-10">
         <div class="card-header cursor-pointer">
             <div class="card-title m-0">
-                <h3 class="fw-bolder fs-6 m-0">Partnership</h3>
+                <h3 class="fw-bolder fs-6 m-0">Ketua Badan Otonom</h3>
             </div>
             <a data-bs-toggle="modal" data-bs-target="#create_perawat" href="{{ route('strukturorganisasi.store') }}"
                 type="button" class="align-self-center  btn btn-sm btn-primary "><i class="fas fa-plus"

@@ -20,7 +20,7 @@
                             <!--begin::Image input-->
                             <div class="image-input image-input-empty image-input-outline  @error('photo') is-invalid @enderror"
                                 data-kt-image-input="true"
-                                style="background-image: url('{{ url('storage/image/katalog') }}/{{ $result['logo'] }}')">
+                                style="background-image: url('{{ url('image/katalog') }}/{{ $result['logo'] }}')">
                                 <!--begin::Image preview wrapper-->
                                 <div class="image-input-wrapper w-125px h-125px"></div>
                                 <!--end::Image preview wrapper-->

@@ -70,7 +70,7 @@
         </div>
     </section>
     <section class="container mt-15 mb-15">
-        <h2 id="s1">Pengurus Periode 2018-2021</h2>
+        <h2 id="s1">BPC HIPMI Kota Bandung 2022-2025</h2>
         <div class="row mt-8" id="so">
             @foreach ($aktif as $key => $item)
                 <div class="col-lg-3 col-md-6 col-sm-6 align-items-center">
@@ -84,7 +84,7 @@
             @endforeach
         </div>
         <div class="row mt-8">
-            <h3 id="s6">Komparteman - Kompartemen</h3><br>
+            <h3 id="s6">Ketua Badan Otonom</h3><br>
             @foreach ($partner as $key => $item)
                 <div class="col-lg-3 col-md-6 col-sm-6 align-items-center">
                     <img class="mx-auto mb-4 col-12" src="{{ url('storage/public') }}/{{ $item['gambar'] }}"

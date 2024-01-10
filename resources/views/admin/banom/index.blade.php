@@ -32,7 +32,7 @@
                         @foreach ($result as $key => $item)
                             <tr>
                                 <td>{{ $key + 1 }}</td>
-                                <td><img alt="Logo" src="{{ url('storage/image/banom') }}/{{ $item['logo'] }}"
+                                <td><img alt="Logo" src="{{ asset('image/banom') }}/{{ $item['logo'] }}"
                                         class="img-fluid w-100" /></td>
                                 <td>{{ $item['judul'] }}</td>
                                 <td>{{ $item['deskripsi_pendek'] }}</td>

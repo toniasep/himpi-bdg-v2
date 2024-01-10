@@ -20,7 +20,7 @@
             </div>
             <div class="col-lg-4 p-5 mt-5">
                 <div class="frame-image d-flex align-items-center justify-content-center " id="img-katalog-detail">
-                    <img src="{{ asset('storage/image/banom') }}/{{ $result['logo'] }}" class="img-fluid p-4" alt="">
+                    <img src="{{ asset('image/banom') }}/{{ $result['logo'] }}" class="img-fluid p-4" alt="">
                 </div>
             </div>
         </div>

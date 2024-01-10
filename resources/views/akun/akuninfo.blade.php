@@ -6,7 +6,7 @@
                 <!--begin: Pic-->
                 <div class="me-7 mb-4">
                     <div class="symbol symbol-100px symbol-lg-160px symbol-fixed position-relative">
-                        <img alt="Pic" src="{{ url('storage/image/pengguna') }}/{{ Auth::user()->photo }}" />
+                        <img alt="Pic" src="{{ url('image/pengguna') }}/{{ Auth::user()->photo }}" />
                         <div
                             class="position-absolute translate-middle bottom-0 start-100 mb-6 bg-success rounded-circle border border-4 border-body h-20px w-20px">
                         </div>

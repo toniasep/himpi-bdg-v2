@@ -34,7 +34,7 @@
                     <div class="box p-8 m-2 box-banom">
                         <div class="row mb-2">
                             <div class="col-lg-3">
-                                <img src="{{ asset('storage/image/banom') }}/{{ $item['logo'] }}"
+                                <img src="{{ asset('image/banom') }}/{{ $item['logo'] }}"
                                     class="img-fluid img-banom">
                             </div>
                             <div class="col-lg-9 ">

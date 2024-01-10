@@ -555,7 +555,7 @@
                                     data-kt-menu-trigger="click" data-kt-menu-attach="parent"
                                     data-kt-menu-placement="bottom-end" data-kt-menu-flip="bottom">
                                     <img alt="Pic"
-                                        src="{{ url('storage/image/pengguna') }}/{{ Auth::user()->photo }}" />
+                                        src="{{ url('image/pengguna') }}/{{ Auth::user()->photo }}" />
                                 </div>
                                 <!--begin::Menu-->
                                 <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold py-4 fs-6 w-275px"
@@ -566,7 +566,7 @@
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-50px symbol-circle me-5">
                                                 <img alt="Logo"
-                                                    src="{{ url('storage/image/pengguna') }}/{{ Auth::user()->photo }}" />
+                                                    src="{{ url('image/pengguna') }}/{{ Auth::user()->photo }}" />
                                             </div>
                                             <!--end::Avatar-->
                                             <!--begin::Username-->
