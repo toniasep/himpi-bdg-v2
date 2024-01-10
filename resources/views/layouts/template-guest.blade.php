@@ -18,11 +18,14 @@
     <link rel="stylesheet" href="{{ url('assets/css/custom-font.css') }}">
     <link href="{{ url('assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     @yield('css-inner')
 </head>
 
 <body>
-
+    {{-- <a href="https://api.whatsapp.com/send?phone=6282138680308&text=Hallo" class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+    </a> --}}
     <div class="content-wrapper ">
         <header class="wrapper bg-soft-primary">
             <nav
@@ -172,7 +175,7 @@
                         <p class="mb-4 footer-subtitle">© 2022 HIPMI Kota Bandung. <br>All rights reserved.</p>
                         <br>
                         <p class="mb-4 footer-subtitle">Developed by: <br>
-                            PT. Langgeng Inovasi Teknologi</p>
+                            <a href="https://www.langgenginovasiteknologi.com/" target="_blank"> Langgeng Inovasi Teknologi</a></p>
                     </div>
                     <!-- /.widget -->
                 </div>
@@ -209,9 +212,8 @@
                         <ul class="list-unstyled mb-0">
                             <li>
                                 <div class="nav social social-white">
-                                    <a href="https://wa.me/6281395289598"><i class="uil uil-whatsapp"></i>
-                                        +62
-                                        813-9528-9598
+                                    <a href="https://wa.me/6282138680308" target="_blank"><i class="uil uil-whatsapp"></i>
+                                        +62821-3868-0308
                                     </a>
                                 </div>
                             </li>
