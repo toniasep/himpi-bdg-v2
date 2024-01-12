@@ -219,8 +219,8 @@
                             </li>
                             <li>
                                 <div class="nav social social-white">
-                                    <a href="mailto:info@hipmibdg.org"><i class="uil uil-envelope"></i>
-                                        info@hipmibdg.org </a>
+                                    <a href="mailto:info.anggota@hipmibdg.or.id"><i class="uil uil-envelope"></i>
+                                        info.anggota@hipmibdg.or.id </a>
                                 </div>
                             </li>
                         </ul>
