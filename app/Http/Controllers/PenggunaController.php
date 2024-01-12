@@ -36,18 +36,20 @@ class PenggunaController extends Controller
 
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'email' => 'email|required|unique:users|max:255',
-            'password' => 'required|min:8',
-            'role' => 'required',
-            'name' => 'required|max:100',
-            'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:1048'
-        ]);
-        if ($validator->fails()) {
-            return redirect()->route('pengguna.index')
-                ->withErrors($validator)
-                ->withInput();
-        }
+        // dd($request->all());
+        // $validator = Validator::make($request->all(), [
+        //     'email' => 'email|required|max:255',
+        //     'password' => 'required|min:8',
+        //     'role' => 'required',
+        //     'name' => 'required|max:100',
+        //     'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:1048'
+        // ]);
+        // // dd($validator);
+        // if ($validator->fails()) {
+        //     return redirect()->route('pengguna.index')
+        //         ->withErrors($validator)
+        //         ->withInput();
+        // }
         $file_uploaded = null; 
         $akun = new User;
         $akun->name = $request->name;
