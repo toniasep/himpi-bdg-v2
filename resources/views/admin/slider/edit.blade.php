@@ -21,7 +21,7 @@ Ubah Data Pengguna
                             <select name="role" class="form-control" required>
                                 <option value="anggota" name="role" @if($result['role'] == 'anggota') selected @endif>Anggota</option>
                                 <option value="admin" name="role" @if($result['role'] == 'admin') selected @endif>Admin</option>
-                                <option value="pengurus" name="role" @if($result['role'] == 'pengurus') selected @endif>pengurus</option>
+                                {{-- <option value="pengurus" name="role" @if($result['role'] == 'pengurus') selected @endif>pengurus</option> --}}
                             </select>
                             @if ($errors->has('role'))
                             <span class="help-block text-danger">

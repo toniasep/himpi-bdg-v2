@@ -101,12 +101,19 @@
                                             class="btn btn-navbar btn-outline-success" type="submit">Jadi Anggota</button>
                                     </li> --}}
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link  dropdown-toggle" href="#"><img
+                                        <a class="nav-link  dropdown-toggle" href="#">
+                                            {{-- <img
                                                 style="width: 20px; color: {{ request()->is('/') ? '' : '#111827' }} "
                                                 src="{{ asset('image/pengguna') }}/{{ Auth::user()->photo }}"
-                                                alt="" class="img-fluid ">
+                                                alt="" class="img-fluid "> --}}
+                                                Akun
                                             </i></a>
                                         <ul class="dropdown-menu">
+                                            @if (Auth::user()->role != 'pengguna')
+                                            <li class="nav-item"><a class="dropdown-item"
+                                                    href="/admin/home">Dashboard</a></li>
+                                                
+                                            @else
                                             {{-- <li class="nav-item"><a class="dropdown-item" href="#"></a></li> --}}
                                             <li class="nav-item"><a class="dropdown-item"
                                                     href="{{ route('anggota.edit_akun') }}">Akun</a></li>
@@ -114,6 +121,7 @@
                                                     href="/anggota/katalog-pengguna">Katalog</a></li>
                                             {{-- <li class="nav-item"><a class="dropdown-item"
                                                     href="{{ route('anggota') }}">Partnership</a></li> --}}
+                                            @endif
                                             <li>
                                                 <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                                     style="">

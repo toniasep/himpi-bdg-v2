@@ -565,8 +565,8 @@
                                         <div class="menu-content d-flex align-items-center px-3">
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-50px symbol-circle me-5">
-                                                <img alt="Logo"
-                                                    src="{{ url('image/pengguna') }}/{{ Auth::user()->photo }}" />
+                                                Akun
+                                                {{-- <img alt="Logo" src="{{ url('image/pengguna') }}/{{ Auth::user()->photo }}" /> --}}
                                             </div>
                                             <!--end::Avatar-->
                                             <!--begin::Username-->

@@ -181,9 +181,9 @@
                                                 @if (old('role') == 'admin') selected @endif>
                                                 Admin
                                             </option>
-                                            <option value="pengurus" name="role"
+                                            {{-- <option value="pengurus" name="role"
                                                 @if (old('role') == 'pengurus') selected @endif>
-                                                pengurus</option>
+                                                pengurus</option> --}}
                                         </select>
                                         @if ($errors->has('role'))
                                             <span class="help-block text-danger">
