@@ -42,7 +42,7 @@ class PenggunaController extends Controller
         //     'password' => 'required|min:8',
         //     'role' => 'required',
         //     'name' => 'required|max:100',
-        //     'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:1048'
+        //     'photo' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg|max:1048'
         // ]);
         // // dd($validator);
         // if ($validator->fails()) {
@@ -82,7 +82,7 @@ class PenggunaController extends Controller
             'email' => 'email|required|max:255',
             'role' => 'required',
             'name' => 'required|max:100',
-            'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:1048'
+            'photo' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg|max:1048'
         ]);
         if ($validator->fails()) {
             return redirect()->route('pengguna.edit', $id)
@@ -133,7 +133,7 @@ class PenggunaController extends Controller
            'email' => 'email|required|max:255',
            'role' => 'required',
            'name' => 'required|max:100',
-           'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:1048'
+           'photo' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg|max:1048'
        ]);
        if ($validator->fails()) {
            return redirect()->route('anggota.edit_akun', $id)

@@ -24,7 +24,7 @@ class BanomController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'logo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1048',
+            'logo' => 'required|image|mimes:jpeg,png,jpg,JPG,gif,svg|max:1048',
             'judul'  => 'required',
             'deskripsi_pendek'  => 'required',
             'deskripsi'  => 'required'
@@ -63,7 +63,7 @@ class BanomController extends Controller
     public function update(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
-            'logo'  => 'image|mimes:jpeg,png,jpg,gif,svg|max:1048',
+            'logo'  => 'image|mimes:jpeg,png,jpg,JPG,gif,svg|max:1048',
             'judul'  => 'required',
             'deskripsi_pendek'  => 'required',
             'deskripsi'  => 'required',
