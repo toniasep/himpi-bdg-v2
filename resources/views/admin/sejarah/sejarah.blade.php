@@ -36,7 +36,7 @@ Sejarah
                                     <i class="bi bi-pencil-fill fs-7"></i>
 
                                     <!--begin::Inputs-->
-                                    <input type="file" name="logo1" accept=".png, .jpg, .jpeg" />
+                                    <input type="file" name="logo1" accept=".png, .jpg, .jpeg, .JPG" />
                                     <input type="hidden" name="avatar_remove" />
                                     <!--end::Inputs-->
                                 </label>

@@ -29,7 +29,7 @@ class SliderController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1048'
+            'gambar' => 'required|image|mimes:jpeg,png,jpg,JPG,gif,svg|max:1048'
         ]);
         if ($validator->fails()) {
             return redirect()->route('slider.index')
