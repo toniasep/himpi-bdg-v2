@@ -6,6 +6,7 @@ use App\Bidang_usaha;
 use App\User;
 use App\Katalog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class KatalogController extends Controller
 {
@@ -98,22 +99,29 @@ class KatalogController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            'nama_katalog' => 'required',
-            'deskripsi' => 'required',
-            'alamat' => 'required',
-            'nama_pemilik' => 'required',
-            'no_pemilik' => 'required',
-            'email_pemilik' => 'required',
-            'facebook' => 'max:255',
-            'instagram' => 'max:255',
-            'twitter' => 'max:255',
-            'youtube' => 'max:255',
-            'logo' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg|max:1048',
-            'master_bidang_usaha_id' => 'required',
-            'user_id' => 'required',
-            'cv' => 'required'
-        ]);
+        // dd($request->toArray());
+        // $validator = Validator::make($request->all(), [
+        //     'nama_katalog' => 'required',
+        //     'deskripsi' => 'required',
+        //     'alamat' => 'required',
+        //     'nama_pemilik' => 'required',
+        //     'no_pemilik' => 'required',
+        //     'email_pemilik' => 'required',
+        //     'facebook' => 'max:255',
+        //     'instagram' => 'max:255',
+        //     'twitter' => 'max:255',
+        //     'youtube' => 'max:255',
+        //     'logo' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg|max:1048',
+        //     'master_bidang_usaha_id' => 'required',
+        //     'user_id' => 'required',
+        //     'cv' => 'required'
+        // ]);
+        // if ($validator->fails()) {
+        //     return redirect()->route('katalog.edit', $id)
+        //         ->withErrors($validator)
+        //         ->withInput();
+        // }
+        // dd($request->nama_katalog);
             $file_uploaded = null; 
             $katalog = Katalog::find($id);
             $katalog->nama_katalog = $request->nama_katalog;
@@ -128,6 +136,8 @@ class KatalogController extends Controller
             $katalog->youtube = $request->youtube;
             $katalog->master_bidang_usaha_id = $request->master_bidang_usaha_id;
             $katalog->user_id = $request->user_id;
+            
+            // dd($katalog->toArray());
             if ($request->hasFile('cv')) { 
                 $path = 'public/pdf/katalog'; 
                 $cv_name = 'HIPMI-Bandung(Himpunan-Pengusaha-Muda-Indonesia-Bandung)' . time() . '.' . request()->cv->getClientOriginalExtension(); 
@@ -144,7 +154,6 @@ class KatalogController extends Controller
                 $file_uploaded = $logo_name; 
                 $katalog->logo = $file_uploaded;
             }        
-            // dd($katalog);
             $katalog->save();
         return redirect()->route('katalog.index')->with(['message' => 'Data berhasil Di Update!', 'error' => 'success']);
     }
