@@ -22,7 +22,7 @@ class CmsController extends Controller
     public function sejarahupdate(Request $request, $id)
     {
         $this->validate($request, [
-            'logo1' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg',
+            'logo1' => 'image|mimes:jpeg,png,jpg,gif,svg',
             'k1'  => 'required',
         ]);
         $var = Cms_konten::find($id);
@@ -66,7 +66,7 @@ class CmsController extends Controller
     {
         $this->validate($request, [
             // 'jabatan' => 'required',
-            'gambar' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg',
+            'gambar' => 'image|mimes:jpeg,png,jpg,gif,svg',
             'nama' => 'required', 
             'kategori' => 'required', 
             'nourut' => 'required', 
@@ -94,7 +94,7 @@ class CmsController extends Controller
    public function strukturorganisasiupdate(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
-            'gambar' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg',
+            'gambar' => 'image|mimes:jpeg,png,jpg,gif,svg',
             'nama' => 'required', 
             'kategori' => 'required', 
             'nourut' => 'required', 

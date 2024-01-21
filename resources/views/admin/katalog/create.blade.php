@@ -82,7 +82,7 @@ Tambah Data Katalog
                                     <i class="bi bi-pencil-fill fs-6"></i>
 
                                     <!--begin::Inputs-->
-                                    <input type="file" name="logo" accept=".png, .jpg, .jpeg, .JPG" required/>
+                                    <input type="file" name="logo" accept=".png, .jpg, .jpeg" required/>
                                     <input type="hidden" name="avatar_remove" />
                                     <!--end::Inputs-->
                                 </label>
