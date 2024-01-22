@@ -35,22 +35,22 @@ class KatalogController extends Controller
     {
         // dd($request->toArray());
         //validasi
-        $this->validate($request, [
-            'nama_katalog' => 'required',
-            'deskripsi' => 'required',
-            'alamat' => 'required',
-            'nama_pemilik' => 'required',
-            'no_pemilik' => 'required',
-            'email_pemilik' => 'required',
-            'facebook' => 'max:255',
-            'instagram' => 'max:255',
-            'twitter' => 'max:255',
-            'youtube' => 'max:255',
-            'logo' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg|max:1048',
-            'master_bidang_usaha_id' => 'required',
-            'user_id' => 'required',
-            'cv' => 'required'
-        ]);
+        // $this->validate($request, [
+        //     'nama_katalog' => 'required',
+        //     'deskripsi' => 'required',
+        //     'alamat' => 'required',
+        //     'nama_pemilik' => 'required',
+        //     'no_pemilik' => 'required',
+        //     'email_pemilik' => 'required',
+        //     'facebook' => 'max:255',
+        //     'instagram' => 'max:255',
+        //     'twitter' => 'max:255',
+        //     'youtube' => 'max:255',
+        //     'logo' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg|max:1048',
+        //     'master_bidang_usaha_id' => 'required',
+        //     'user_id' => 'required',
+        //     'cv' => 'required'
+        // ]);
         $file_uploaded = null; 
         $katalog = new Katalog;
         $katalog->nama_katalog = $request->nama_katalog;
