@@ -108,7 +108,7 @@
                         </div>
                     </div>
                     <div class="row mb-6">
-                        <label class="col-lg-4 col-form-label required fw-bold fs-6">CV Perusahaan </label>
+                        <label class="col-lg-4 col-form-label required fw-bold fs-6">Company Profile Perusahaan </label>
                         <div class="col-lg-8">
                             <input type="file" class="form-control" name="cv" accept=".pdf">
                         </div>
