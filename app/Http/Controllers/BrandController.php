@@ -30,7 +30,7 @@ class BrandController extends Controller
          $this->validate($request, [
             'nama_brand' => 'required',
             'deskripsi_brand' => 'required',
-            'logo_brand' => 'image|mimes:jpeg,png,jpg,gif,svg|max:1048|required',
+            'logo_brand' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg|max:1048|required',
             'katalog_id' => 'required'
         ]);
 
@@ -69,7 +69,7 @@ class BrandController extends Controller
         $this->validate($request, [
             'nama_brand' => 'required',
             'deskripsi_brand' => 'required',
-            'logo_brand' => 'image|mimes:jpeg,png,jpg,gif,svg|max:1048',
+            'logo_brand' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg|max:1048',
             'katalog_id' => 'required'
         ]);
         $file_uploaded = null; 

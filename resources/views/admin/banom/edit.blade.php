@@ -33,8 +33,8 @@
                                         <i class="bi bi-pencil-fill fs-7"></i>
 
                                         <!--begin::Inputs-->
-                                        <input type="file" name="logo" accept=".png, .jpg, .jpeg" />
-                                        <input type="hidden" name="avatar_remove" />
+                                        <input type="file" name="logo" accept=".png, .jpg, .jpeg, .JPG" required="" />
+                                        <input type="hidden" name="avatar_remove" required="" />
                                         <!--end::Inputs-->
                                     </label>
                                     <!--end::Edit button-->

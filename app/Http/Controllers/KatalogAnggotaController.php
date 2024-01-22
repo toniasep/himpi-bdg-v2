@@ -52,7 +52,7 @@ class KatalogAnggotaController extends Controller
             'instagram' => 'max:255',
             'twitter' => 'max:255',
             'youtube' => 'max:255',
-            'logo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:1048',
+            'logo' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg|max:1048',
             'master_bidang_usaha_id' => 'required',
             'user_id' => 'required',
             'cv' => 'required'
@@ -114,7 +114,7 @@ class KatalogAnggotaController extends Controller
         //     'instagram' => 'max:255',
         //     'twitter' => 'max:255',
         //     'youtube' => 'max:255',
-        //     'logo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:1048',
+        //     'logo' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg|max:1048',
         //     'master_bidang_usaha_id' => 'required',
         //     'user_id' => 'required',
         //     'cv' => 'required'
