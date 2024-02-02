@@ -30,7 +30,8 @@ class HomeController extends Controller
     {
         $count_katalog = Katalog::count();
         $count_master_bidang_usaha = Master_bidang_usaha::count();
-        $count_pengurus = User::where('role', 'pengurus')->count();
+        // $count_pengurus = User::where('role', 'pengurus')->count();
+        $count_pengurus = 134;
         $katalog = Katalog::orderBy('kerjasama_count','desc')->limit(15)->get();
         $slider = Slider::where('kategori', 'slider')->inRandomOrder()->get();
         if(is_null($request->q)){
