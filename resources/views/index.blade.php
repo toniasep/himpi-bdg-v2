@@ -117,7 +117,7 @@
                                 {{ $var->Master_bidang_usaha['bidang_usaha'] }}
                             </div>
                         </div>
-                        {{-- <div id="des">{!! Str::limit($var['deskripsi'], 60, ' ...') !!}</div> --}}
+                        <div id="des">{!! Str::limit($var['deskripsi'], 60, ' ...') !!}</div>
                     </div>
                 @endforeach
                 {{-- end loop --}}
