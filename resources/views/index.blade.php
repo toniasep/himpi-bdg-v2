@@ -89,7 +89,7 @@
             <div class="row d-flex justify-content-center mt-15" id="grid-ktl">
                 {{-- start loop --}}
                 @foreach ($katalog as $var)
-                    <div class="col-lg-2 col-md-6 col-sm-6 box-katalog"
+                    {{-- <div class="col-lg-2 col-md-6 col-sm-6 box-katalog"
                         onclick="window.location.replace('{{ route('detailekatalog', $var['id']) }}','_blank')">
                         <div class="box-img p-0"
                             style="background-image: url({{ asset('image/katalog/' . $var['logo']) }});background-size: contain;">
@@ -102,6 +102,22 @@
                                 {{ $var->Master_bidang_usaha['bidang_usaha'] }}
                             </div>
                         </div>
+                    </div> --}}
+                    <div class="col-lg-1 col-md-4 col-sm-6 box-katalog pb-3"
+                        onclick="window.location.replace('{{ route('detailekatalog', $var['id']) }}','_blank')">
+                        <div class="box-img2 p-0" style="">
+                            <img src="{{ asset('image/katalog') }}/{{ $var['logo'] }}" class="img-fluid"
+                                alt="">
+                        </div>
+                        <div class="box-text  ps-2 pe-2" id="box-caption">
+                            <p class="text-left" id="caption-katalog">{{ $var['nama_katalog'] }}</p>
+                        </div>
+                        <div class="col-lg-12 p-0" id="box-desc">
+                            <div class="col-12 ps-3 pe-3 pt-2 pb-2 mb-2 jenis-perusahaan">
+                                {{ $var->Master_bidang_usaha['bidang_usaha'] }}
+                            </div>
+                        </div>
+                        {{-- <div id="des">{!! Str::limit($var['deskripsi'], 60, ' ...') !!}</div> --}}
                     </div>
                 @endforeach
                 {{-- end loop --}}
