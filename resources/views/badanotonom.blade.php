@@ -68,7 +68,7 @@
         .set-bg {
             background-image: url("{{ asset('assets/img/bg.png') }}");
             background-repeat: no-repeat;
-            background-size: contain;
+            background-size: cover;
             background-position: right;
             height: 352px;
         }

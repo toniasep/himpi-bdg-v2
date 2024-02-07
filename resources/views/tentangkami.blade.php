@@ -140,7 +140,7 @@
         .set-bg {
             background-image: url("{{ url('assets/img/bg2.png') }}");
             background-repeat: no-repeat;
-            background-size: contain;
+            background-size: cover;
             min-height: 300px;
             /* background-size: contain; */
             background-position: right;

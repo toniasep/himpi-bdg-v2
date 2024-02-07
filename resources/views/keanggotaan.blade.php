@@ -138,11 +138,12 @@
         }
 
         .set-bg {
-            background-image: url("{{ asset('assets/img/bg.png') }}");
+            background-image: url("{{ asset('assets/img/DSC07647.JPG') }}");
             background-repeat: no-repeat;
             /* background-size: contain; */
             background-position: right;
             height: 352px;
+            background-size: cover;
         }
 
         .bg-keanggotaan {
