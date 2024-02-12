@@ -221,7 +221,7 @@
                                 <div class="col-12 mb-10">
                                     <label class="form-label">KTA</label>
                                     <input type="text" class="form-control"
-                                        name="email" value="" placeholder="Masukan KTA"
+                                        name="kta" value="" placeholder="Masukan KTA"
                                         required="" />
                                     @if ($errors->has('kta'))
                                         <span class="help-block text-danger">
