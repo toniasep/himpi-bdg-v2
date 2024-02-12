@@ -75,7 +75,7 @@
 
                 </div>
                 <div class="col-2    ">
-                    <a href="{{ route('password.request') }}" class="link-primary fs-15 fw-bolder">Lupa Kata Sandi ?</a>
+                    <a href="https://wa.me/6282138680308" target="_blank" class="link-primary fs-15 fw-bolder">Lupa Kata Sandi ?</a>
                 </div>
             </div>
             <!--begin::Actions-->
