@@ -109,7 +109,7 @@
                                                 Akun
                                             </i></a>
                                         <ul class="dropdown-menu">
-                                            @if (Auth::user()->role != 'pengguna')
+                                            @if (Auth::user()->role != 'anggota')
                                             <li class="nav-item"><a class="dropdown-item"
                                                     href="/admin/home">Dashboard</a></li>
                                                 
