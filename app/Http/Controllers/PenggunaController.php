@@ -93,7 +93,9 @@ class PenggunaController extends Controller
         $akun = User::find($id);
         $akun->name = $request->name;
         $akun->email = $request->email;
-        $akun->password = Hash::make($request->password);
+        if($request->password){
+            $akun->password = Hash::make($request->password);
+        }
         $akun->role = $request->role;
         $akun->kta = $request->kta;
         if ($request->hasFile('photo')) { 
