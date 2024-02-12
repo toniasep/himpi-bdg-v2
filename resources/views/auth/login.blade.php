@@ -75,7 +75,7 @@
 
                 </div>
                 <div class="col-2    ">
-                    <a href="https://wa.me/6282138680308" target="_blank" class="link-primary fs-15 fw-bolder">Lupa Kata Sandi ?</a>
+                    <a href="https://api.whatsapp.com/send?phone=6282138680308&text=Salam%2C%20Admin%20BPC%20HIPMI%20Kota%20Bandung.%0A%0APerkenalkan%20saya%20%5BNama%20Anda%5D%20mengalami%20masalah%20dengan%20lupa%20kata%20sandi%20akun%20saya.%20Mohon%20bantuan%20untuk%20proses%20pemulihan%20kata%20sandi.%20Terima%20kasih.%0A%0A%5BNama%20Lengkap%20Anda%5D%0A%5BNo%20KTA%20Anda%5D%0A%5BEmail%20Anda%5D" target="_blank" class="link-primary fs-15 fw-bolder">Lupa Kata Sandi ?</a>
                 </div>
             </div>
             <!--begin::Actions-->
