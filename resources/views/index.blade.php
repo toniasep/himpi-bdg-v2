@@ -10,12 +10,12 @@
                     <div class="caption-hipmi">HIPMI KOTA BANDUNG
                     </div>
                     <div class="caption-utama-new">
-                        Organisasi Pengusaha Terbesar di Indonesia
+                        Organisasi Pengusaha Muda Terbesar di Indonesia
                     </div>
                     <p class="sub-caption-utama  pe-lg-0">Berdiri sejak 1972, HIPMI menjadi tempat berhimpun bagi
                         pengusaha muda Indonesia untuk berjejaring dan memberikan dampak terhadap masyarakat luas. Mari
                         bergabung bersama kami HIPMI Kota Bandung.</p>
-                    <button onclick="window.location.replace('{{ route('keanggotaan') }}','_blank')"
+                    <button onclick="window.location.replace('{{ route('tentangkami') }}','_blank')"
                         class="btn mt-7 btn btn-green" id="btn-yellow" type="button">
                         <p class="subtitle-custom text-center" style="color: #FFFFFF; margin-top: 20px; font-weight: bold">
                             Sejarah

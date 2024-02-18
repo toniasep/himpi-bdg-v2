@@ -75,7 +75,7 @@
             @foreach ($aktif as $key => $item)
                 <div class="col-lg-3 col-md-6 col-sm-6 align-items-center">
                     <img class="mx-auto mb-4 col-12" src="{{ url('storage/public') }}/{{ $item['gambar'] }}"
-                        style="max-width: 300px; max-height: 200px"
+                        style="max-width: 300px; max-height: 200px; object-fit:cover; object-position: 0% 10%;"
                         alt="HIPMI BANDUNG {{ $item['nama'] }}-{{ $item['jabatan'] }}" />
                     <h4 id="s7" class="mb-1">{{ $item['nama'] }}</h4>
                     <div id="s8" class="meta mb-2">{{ $item['jabatan'] }}</div>
@@ -88,7 +88,7 @@
             @foreach ($partner as $key => $item)
                 <div class="col-lg-3 col-md-6 col-sm-6 align-items-center">
                     <img class="mx-auto mb-4 col-12" src="{{ url('storage/public') }}/{{ $item['gambar'] }}"
-                        style="max-width: 300px; max-height: 200px"
+                        style="max-width: 300px; max-height: 200px; object-fit:cover; object-position: 0% 10%;"
                         alt="HIPMI BANDUNG {{ $item['nama'] }}-{{ $item['jabatan'] }}" />
                     <h4 id="s7" class="mb-1">{{ $item['nama'] }}</h4>
                     <div id="s8" class="meta mb-2">{{ $item['jabatan'] }}</div>
@@ -109,7 +109,7 @@
                             <div class="swiper-slide" id="slidetentang">
                                 <img src="{{ url('storage/public') }}/{{ $item['gambar'] }}"
                                     alt="HIPMI BANDUNG {{ $item['nama'] }}-{{ $item['jabatan'] }}"
-                                    style="max-width: 300px; max-height: 200px">
+                                    style="max-width: 300px; max-height: 200px; object-fit:cover; object-position: 0% 10%;">
                                 <div class="pt-3 pb-3">
                                     <h4 id="s7" class="mb-1">{{ $item['nama'] }}</h4>
                                     <div id="s8" class="meta mb-2">{{ $item['periode'] }}</div>
