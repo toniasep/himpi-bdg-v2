@@ -71,16 +71,16 @@
 
 @media screen and (max-width : 768px) {
     .sejak-count{
-      padding: 0px 36px;
-      margin-bottom: 30px;
-      margin-top: 30px;
+        padding: 0px 36px;
+        margin-bottom: 30px;
+        margin-top: 30px;
     }
 }
 
 @media screen and (max-width : 430px) {
     .sejak-count{
-      padding: 0px 36px;
-      margin-bottom: 40px;
+        padding: 0px 36px;
+        margin-bottom: 40px;
     }
 }
 
@@ -88,6 +88,7 @@
     background-size:     cover;                      /* <------ */
     background-repeat:   no-repeat;
     background-position: center center;
+
 }
 
 .style-hipmibdg{
