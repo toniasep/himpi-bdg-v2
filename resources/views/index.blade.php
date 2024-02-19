@@ -9,10 +9,10 @@
                 <div class="container-banner">
                     <div class="caption-hipmi">HIPMI KOTA BANDUNG
                     </div>
-                    <div class="caption-utama-new">
+                    <div class="caption-utama-new px-lg-5">
                         Organisasi Pengusaha Muda Terbesar di Indonesia
                     </div>
-                    <p class="sub-caption-utama  pe-lg-0">Berdiri sejak 1972, HIPMI menjadi tempat berhimpun bagi
+                    <p class="sub-caption-utama  px-lg-5">Berdiri sejak 1972, HIPMI menjadi tempat berhimpun bagi
                         pengusaha muda Indonesia untuk berjejaring dan memberikan dampak terhadap masyarakat luas. Mari
                         bergabung bersama kami HIPMI Kota Bandung.</p>
                     <button onclick="window.location.replace('{{ route('tentangkami') }}','_blank')"
@@ -266,7 +266,7 @@ if($anggota == "not found"){ ?>
         }
 
         .banner-hipmi {
-            background-image: linear-gradient(0deg, rgba(0, 53, 24, 0.9), rgba(0, 53, 24, 0.9)), url("{{ asset('/image/banner/20220425-DSC00550.jpg') }}");
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{ asset('/image/banner/20220425-DSC00550.jpg') }}");
         }
 
         .elipse {
