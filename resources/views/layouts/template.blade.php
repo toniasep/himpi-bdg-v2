@@ -394,7 +394,7 @@
                             </div>
 
 
-                            <div class="menu-item mb-1">
+                            {{-- <div class="menu-item mb-1">
                                 <a class="menu-link {{ Route::is('slider.index') ? 'active' : '' }}"
                                     href="{{ route('slider.index') }}" title="Data Slider" data-bs-toggle="tooltip"
                                     data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
@@ -421,7 +421,7 @@
                                     </span>
                                     <span class="menu-title">Data Slider</span>
                                 </a>
-                            </div>
+                            </div> --}}
 
 
                             <div class="menu-item mb-1">
