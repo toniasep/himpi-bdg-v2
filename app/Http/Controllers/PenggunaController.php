@@ -81,8 +81,8 @@ class PenggunaController extends Controller
         $validator = Validator::make($request->all(), [
             'email' => 'email|required|max:255',
             'role' => 'required',
-            'name' => 'required|max:100',
-            'photo' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg|max:1048'
+            'name' => 'required|max:100'
+            // 'photo' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg,JPEG|max:1048'
         ]);
         if ($validator->fails()) {
             return redirect()->route('pengguna.edit', $id)
