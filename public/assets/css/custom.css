@@ -124,10 +124,10 @@
 .container-banner{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     padding: 20px;
-    gap: 32px;
+    gap: 10px;
     width: 100%;
     height: 800px;
     left: 199px;
@@ -140,7 +140,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 padding: 0px;
-gap: 12px;
+gap: 10px;
 
 width: 1041px;
 height: 272px;
@@ -173,12 +173,27 @@ flex-grow: 0;
     color: #FFFFFF;
 }
 
+//deive HD Resolution
+@media screen and (min-width: 1400px) {
+    .caption-utama-new {
+        font-size: 38px;
+        line-height: 70px;
+    }
+    .caption-utama-highlighting {
+        font-size: 38px;
+        line-height: 70px;
+    }
+    .sub-caption-utama{
+        font-size: 20px;  
+    }
+}
+
 .caption-utama-new {
     font-family: 'monument';
     font-style: normal;
-    font-weight: 800;
-    font-size: 56px;
-    line-height: 70px;
+    font-weight: lighter;
+    font-size: 30px;
+    line-height: 50px;
     /* or 125% */
 
     text-align: center;
@@ -190,6 +205,22 @@ flex-grow: 0;
     color: #FFFFFF;
 }
 
+.caption-utama-highlight {
+    font-family: 'monument';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 50px;
+    /* or 125% */
+
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    /* white */
+
+    color: #FFFFFF;
+}
 
 
 .caption-hipmi {
@@ -212,7 +243,7 @@ flex-grow: 0;
     font-family: 'public';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 28px;
     /* or 156% */
 
@@ -262,9 +293,8 @@ flex-grow: 0;
     }
     #box-searching {
         width: auto!important;
-          height: auto!important;
-
-  }
+        height: auto!important;
+    }
 
 }
 
@@ -278,8 +308,19 @@ flex-grow: 0;
     }
     .caption-utama-new {
 
-        font-size: 42px;
+        font-size: 22px;
+        line-height:25px;
+    }
+    .caption-utama-highlight {
 
+        font-size: 22px;
+        line-height:25px;
+    }
+    .sub-caption-utama {
+        font-size:12px;
+        padding-left: 20px;
+        padding-right: 20px;
+        line-height:20px;
     }
     .order-sm-first {
         order: -1 !important
@@ -296,6 +337,7 @@ flex-grow: 0;
         margin-top: 20%;
         background-size: contain!important;
         background-position: top!important;
+        
     }
     #mbl-pd-set{
         padding: 25px 28px 45px!important;
@@ -439,7 +481,7 @@ flex-grow: 0;
     .swiper-slide{
         height:100%!important;
     }
- }
+}
 
 
 #text-banom {

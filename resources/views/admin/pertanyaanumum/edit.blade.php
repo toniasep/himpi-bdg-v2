@@ -40,14 +40,18 @@ Ubah Pertanyaan Umum
                 </div>
                 <div class="row">
                     <div class="col-12 mb-10">
-                        <label class="form-label">Deskripsi</label>
-                        <textarea class="form-control  @error('deskripsi') is-invalid @enderror" name="deskripsi" placeholder="Masukan deskripsi" required=""  cols="3" rows="3">{{$result['deskripsi']}}</textarea>
-                        @if ($errors->has('deskripsi'))
-                        <span class="help-block text-danger">
-                            <strong>{{ $errors->first('deskripsi') }}</strong>
-                        </span>
-                        @endif
-                    </div>
+                            <label class="form-label">deskripsi</label>
+                            <!--begin::Block-->
+                            <div class="py-5">
+                                <textarea name="deskripsi" id="kt_docs_ckeditor_classic" required="">{!! $result['deskripsi'] !!}</textarea>
+                            </div>
+                            <!--end::Block-->
+                            @if ($errors->has('deskripsi'))
+                                <span class="help-block text-danger">
+                                    <strong>{{ $errors->first('deskripsi') }}</strong>
+                                </span>
+                            @endif
+                        </div>
                 </div>
         </div>
         <div class="d-flex flex-stack pt-8">
@@ -64,6 +68,15 @@ Ubah Pertanyaan Umum
     </div>
     </form>
 </div>
+@endsection
+@include('pluign.data-table')
+@section('js2')
+    <script src="{{ url('assets/plugins/global/plugins.bundle.js') }}"></script>
+    <script src="{{ url('assets/js/scripts.bundle.js') }}"></script>
+    <script src="{{ url('assets/plugins/custom/prismjs/prismjs.bundle.js') }}"></script>
+    <script src="{{ url('assets/plugins/custom/ckeditor/ckeditor-classic.bundle.js') }}"></script>
+    <script src="{{ url('assets/js/custom/documentation/documentation.js') }}"></script>
+    <script src="{{ url('assets/js/custom/documentation/editors/ckeditor/classic.js') }}"></script>
 
 
 @endsection

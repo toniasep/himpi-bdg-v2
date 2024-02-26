@@ -137,14 +137,27 @@
             background: linear-gradient(180deg, rgba(0, 53, 24, 0.1) 0%, rgba(0, 53, 24, 0) 83.94%);
         }
 
+        @media screen and (min-width : 400px) {
+            .set-bg {
+                background-image: url("{{ url('assets/img/bg2.png') }}");
+                background-repeat: no-repeat;
+                background-size: cover;
+                min-height: 300px;
+                /* background-size: contain; */
+                background-position: right;
+                margin-bottom: 200px;
+            } 
+        }
+
         .set-bg {
             background-image: url("{{ url('assets/img/bg2.png') }}");
             background-repeat: no-repeat;
-            background-size: cover;
             min-height: 300px;
-            /* background-size: contain; */
-            background-position: right;
+            background-size: 150%;
+            background-position: 5% 45%;
             margin-bottom: 200px;
+            object-fit: cover;
+            object-position: center;
         }
 
         .bg-keanggotaan {

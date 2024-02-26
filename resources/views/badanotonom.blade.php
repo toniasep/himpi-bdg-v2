@@ -65,12 +65,25 @@
             background-image: url("{{ asset('assets/img/bg-tentang-moto.png') }}");
         }
 
+        @media screen and (max-width : 768px) {
+            .set-bg {
+                background-image: url("{{ asset('assets/img/bg.png') }}");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: center;
+                height: 352px;
+            }  
+        }
+
         .set-bg {
             background-image: url("{{ asset('assets/img/bg.png') }}");
             background-repeat: no-repeat;
-            background-size: cover;
-            background-position: right;
-            height: 352px;
+            min-height: 300px;
+            background-size: 150%;
+            background-position: 5% 45%;
+            margin-bottom: 200px;
+            object-fit: cover;
+            object-position: center;
         }
 
         .bg-keanggotaan {

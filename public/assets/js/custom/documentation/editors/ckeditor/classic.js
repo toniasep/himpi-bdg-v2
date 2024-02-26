@@ -11,6 +11,11 @@ var KTFormsCKEditorClassic = {
         })).catch((o => {
             console.error(o)
         }))
+        ClassicEditor.create(document.querySelector("#kt_docs_ckeditor_classic3")).then((o => {
+            console.log(o)
+        })).catch((o => {
+            console.error(o)
+        }))
         ClassicEditor.create(document.querySelector("#kt_docs_ckeditor_document")).then((o => {
             console.log(o)
         })).catch((o => {

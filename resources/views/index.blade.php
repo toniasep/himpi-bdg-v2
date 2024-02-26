@@ -10,13 +10,15 @@
                     <div class="caption-hipmi">HIPMI KOTA BANDUNG
                     </div>
                     <div class="caption-utama-new px-lg-5">
-                        Organisasi Pengusaha Muda Terbesar di Indonesia
+                        Organisasi Pengusaha Muda
+                        <span class="caption-utama-highlight">Terbesar</span>
+                        di Indonesia
                     </div>
-                    <p class="sub-caption-utama  px-lg-5">Berdiri sejak 1972, HIPMI menjadi tempat berhimpun bagi
+                    <p class="sub-caption-utama px-lg-15 mx-lg-15">Berdiri sejak 1972, HIPMI menjadi tempat berhimpun bagi
                         pengusaha muda Indonesia untuk berjejaring dan memberikan dampak terhadap masyarakat luas. Mari
                         bergabung bersama kami HIPMI Kota Bandung.</p>
                     <button onclick="window.location.replace('{{ route('tentangkami') }}','_blank')"
-                        class="btn mt-7 btn btn-green" id="btn-yellow" type="button">
+                        class="btn mt-3 btn btn-green" id="btn-yellow" type="button">
                         <p class="subtitle-custom text-center" style="color: #FFFFFF; margin-top: 20px; font-weight: bold">
                             Sejarah
                             Terbentuk</p>
@@ -45,16 +47,17 @@
                 <div class="col-md-8 sejak-count">
                     <div class="row bg-green p-7 text-center" style="margin-right: 24px" id="m0">
                         <div class="col-lg-4" id="line-after-div">
-                            <h2 class="sejak-style" style="color: #FFFFFF">{{ $count_katalog }}</h2>
-                            <p class="subtitle-custom" style="color: #FFFFFF">Perusahaan Anggota</p>
+                            <h2 class="sejak-style" style="color: #FFFFFF">{{ $count_pengurus }}</h2>
+                            <p class="subtitle-custom" style="color: #FFFFFF">Pengurus</p>    
+                            
                         </div>
                         <div class="col-lg-4" id="line-after-div">
-                            <h2 class="sejak-style" style="color: #FFFFFF">{{ $count_master_bidang_usaha }}</h2>
-                            <p class="subtitle-custom" style="color: #FFFFFF">Klasifikasi Usaha</p>
+                            <h2 class="sejak-style" style="color: #FFFFFF">{{ $count_katalog }}</h2>
+                            <p class="subtitle-custom" style="color: #FFFFFF">Perusahaan Anggota</p>    
                         </div>
                         <div class="col-lg-4" id="line-after-div2">
-                            <h2 class="sejak-style" style="color: #FFFFFF">{{ $count_pengurus }}</h2>
-                            <p class="subtitle-custom" style="color: #FFFFFF">Pengurus</p>
+                            <h2 class="sejak-style" style="color: #FFFFFF">{{ $count_master_bidang_usaha }}</h2>
+                            <p class="subtitle-custom" style="color: #FFFFFF">Klasifikasi Usaha</p>
                         </div>
                     </div>
                 </div>
@@ -162,12 +165,12 @@
             <div class="row gx-md-8 gx-xl-12 gy-10 align-items-center text-center">
                 <h3 class="title-join">Tertarik Menjadi Bagian<br>dari HIPMI Kota Bandung?</h3>
                 <div class="">
-                    <button onclick="window.location.replace('{{ route('keanggotaan') }}','_blank')"
-                        class="btn btn btn-success btn-join" type="button">
-                        <p class="subtitle-custom text-center"
-                            style="color: #FFFFFF; margin-top: 20px; font-weight: bold">
-                            Daftar Menjadi Anggota</p>
-                    </button>
+                <a href="{{ route('keanggotaan') }}" target="_blank" type="button" class="btn btn-success btn-green px-5" style="width: auto!important;">
+                            <p class="subtitle-custom text-center"
+                                style="color: #FFFFFF; margin-top: 20px; font-weight: bold">
+                                Lihat Daftar
+                                Perusahaan</p>
+                        </a>
                 </div>
             </div>
             <!--/.row -->
