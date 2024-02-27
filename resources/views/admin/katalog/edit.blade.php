@@ -69,6 +69,14 @@
                         </div>
                     </div>
                     <div class="row mb-6">
+                        <label class="col-lg-4 col-form-label required fw-bold fs-6">Penilaian Admin</label>
+                        <div class="col-lg-8 fv-row">
+                            <input type="text" name="kerjasama_count"
+                                class="form-control form-control-lg form-control-solid" placeholder="Penilaian Admin"
+                                value="{{ $result['kerjasama_count'] }}" required />
+                        </div>
+                    </div>
+                    <div class="row mb-6">
                         <label class="col-lg-4 col-form-label required fw-bold fs-6">Deskripsi Katalog</label>
                         <div class="col-lg-8 fv-row">
                             <textarea type="text" name="deskripsi" class="form-control form-control-lg form-control-solid"

@@ -63,9 +63,11 @@
                 @foreach ($search as $var)
                     <div class="col-lg-1 col-md-4 col-sm-6 box-katalog pb-3"
                         onclick="window.location.replace('{{ route('detailekatalog', $var['id']) }}','_blank')">
+                        @if($var['kerjasama_count'] >= 20)
                         <div class="fav-icon rounded px-2 py-1">
                             <i class="bi bi-star-fill" style="color: #047857;"></i>
                         </div>
+                        @endif
                         <div class="box-img2 p-0" style="">
                             <img src="{{ asset('image/katalog') }}/{{ $var['logo'] }}" class="img-fluid"
                                 alt="">

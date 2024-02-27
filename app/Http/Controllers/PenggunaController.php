@@ -7,6 +7,8 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
+use App\Katalog;
+use App\Master_bidang_usaha;
 class PenggunaController extends Controller
 {
     public function __construct()
@@ -119,7 +121,11 @@ class PenggunaController extends Controller
     }
     public function home()
     {
-        return view('admin.index');
+        $count_katalog = Katalog::count();
+        $count_master_bidang_usaha = Master_bidang_usaha::count();
+        // $count_pengurus = User::where('role', 'pengurus')->count();
+        $count_pengurus = 134;
+        return view('admin.index', compact('count_katalog', 'count_master_bidang_usaha', 'count_pengurus'));
     }
 
     public function edit_akun()

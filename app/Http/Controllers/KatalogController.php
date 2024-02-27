@@ -65,6 +65,7 @@ class KatalogController extends Controller
         $katalog->youtube = $request->youtube;
         $katalog->master_bidang_usaha_id = $request->master_bidang_usaha_id;
         $katalog->user_id = $request->user_id;
+        $katalog->kerjasama_count = $request->kerjasama_count;
         // $katalog->cv = $request->cv;
         if ($request->hasFile('cv')) { 
             $path = 'public/pdf/katalog'; 
@@ -136,6 +137,7 @@ class KatalogController extends Controller
             $katalog->youtube = $request->youtube;
             $katalog->master_bidang_usaha_id = $request->master_bidang_usaha_id;
             $katalog->user_id = $request->user_id;
+            $katalog->kerjasama_count = $request->kerjasama_count;
             
             // dd($katalog->toArray());
             if ($request->hasFile('cv')) { 
