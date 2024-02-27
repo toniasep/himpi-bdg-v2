@@ -63,6 +63,9 @@
                 @foreach ($search as $var)
                     <div class="col-lg-1 col-md-4 col-sm-6 box-katalog pb-3"
                         onclick="window.location.replace('{{ route('detailekatalog', $var['id']) }}','_blank')">
+                        <div class="fav-icon rounded px-2 py-1">
+                            <i class="bi bi-star-fill" style="color: #047857;"></i>
+                        </div>
                         <div class="box-img2 p-0" style="">
                             <img src="{{ asset('image/katalog') }}/{{ $var['logo'] }}" class="img-fluid"
                                 alt="">
@@ -122,6 +125,15 @@
             width: 800px;
         }
 
+        .fav-icon{
+            display:;
+            position:absolute;
+            background-color: #ECFDF5;
+            box-shadow: 11px 12px 32px -16px rgba(0,0,0,0.48);
+            -webkit-box-shadow: 11px 12px 32px -16px rgba(0,0,0,0.48);
+            -moz-box-shadow: 11px 12px 32px -16px rgba(0,0,0,0.48);
+        }
+        
         /*untuk layar device berukuran kecil*/
         @media screen and (max-width: 450px) {
             #client-paginator {
