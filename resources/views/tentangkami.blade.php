@@ -75,7 +75,7 @@
             @foreach ($aktif as $key => $item)
                 <div class="col-lg-3 col-md-6 col-sm-6 align-items-center">
                     <img class="mx-auto mb-4 col-12" src="{{ url('storage/public') }}/{{ $item['gambar'] }}"
-                        style="max-width: 300px; max-height: 200px"
+                        style="max-width: 300px; max-height: 200px; object-fit:cover; object-position: 0% 10%;"
                         alt="HIPMI BANDUNG {{ $item['nama'] }}-{{ $item['jabatan'] }}" />
                     <h4 id="s7" class="mb-1">{{ $item['nama'] }}</h4>
                     <div id="s8" class="meta mb-2">{{ $item['jabatan'] }}</div>
@@ -88,7 +88,7 @@
             @foreach ($partner as $key => $item)
                 <div class="col-lg-3 col-md-6 col-sm-6 align-items-center">
                     <img class="mx-auto mb-4 col-12" src="{{ url('storage/public') }}/{{ $item['gambar'] }}"
-                        style="max-width: 300px; max-height: 200px"
+                        style="max-width: 300px; max-height: 200px; object-fit:cover; object-position: 0% 10%;"
                         alt="HIPMI BANDUNG {{ $item['nama'] }}-{{ $item['jabatan'] }}" />
                     <h4 id="s7" class="mb-1">{{ $item['nama'] }}</h4>
                     <div id="s8" class="meta mb-2">{{ $item['jabatan'] }}</div>
@@ -109,7 +109,7 @@
                             <div class="swiper-slide" id="slidetentang">
                                 <img src="{{ url('storage/public') }}/{{ $item['gambar'] }}"
                                     alt="HIPMI BANDUNG {{ $item['nama'] }}-{{ $item['jabatan'] }}"
-                                    style="max-width: 300px; max-height: 200px">
+                                    style="max-width: 300px; max-height: 200px; object-fit:cover; object-position: 0% 10%;">
                                 <div class="pt-3 pb-3">
                                     <h4 id="s7" class="mb-1">{{ $item['nama'] }}</h4>
                                     <div id="s8" class="meta mb-2">{{ $item['periode'] }}</div>
@@ -137,14 +137,27 @@
             background: linear-gradient(180deg, rgba(0, 53, 24, 0.1) 0%, rgba(0, 53, 24, 0) 83.94%);
         }
 
+        @media screen and (min-width : 400px) {
+            .set-bg {
+                background-image: url("{{ url('assets/img/bg2.png') }}");
+                background-repeat: no-repeat;
+                background-size: cover;
+                min-height: 300px;
+                /* background-size: contain; */
+                background-position: right;
+                margin-bottom: 200px;
+            } 
+        }
+
         .set-bg {
             background-image: url("{{ url('assets/img/bg2.png') }}");
             background-repeat: no-repeat;
-            background-size: cover;
             min-height: 300px;
-            /* background-size: contain; */
-            background-position: right;
+            background-size: 150%;
+            background-position: 5% 45%;
             margin-bottom: 200px;
+            object-fit: cover;
+            object-position: center;
         }
 
         .bg-keanggotaan {

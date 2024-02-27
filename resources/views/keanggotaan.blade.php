@@ -97,7 +97,8 @@
                                 data-bs-parent="#accordionSimpleExample">
                                 <div class="card-body">
                                     <div id="dsc-keanggotaan">
-                                        {{ $item['deskripsi'] }}</div>
+                                        <p id="text-banom">{!! $item['deskripsi'] !!}</p>
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -137,15 +138,26 @@
             background-image: url("{{ asset('assets/img/bg-tentang-moto.png') }}");
         }
 
+        @media screen and (max-width : 768px) {
+            .set-bg {
+                background-image: url("{{ asset('assets/img/DSC07647.JPG') }}");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: center;
+                height: 352px;
+            }  
+        }
+
         .set-bg {
             background-image: url("{{ asset('assets/img/DSC07647.JPG') }}");
             background-repeat: no-repeat;
-            /* background-size: contain; */
-            background-position: right;
-            height: 352px;
-            background-size: cover;
+            min-height: 300px;
+            background-size: 110%;
+            background-position: 20% 45%;
+            margin-bottom: 200px;
+            object-fit: cover;
+            object-position: center;
         }
-
         .bg-keanggotaan {
             background-image: url("{{ asset('assets/img/bg-keanggotaan.png') }}");
             min-height: 350px;
