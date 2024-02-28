@@ -1,6 +1,6 @@
 @extends('layouts.template-anggota')
 @section('title')
-    Ubah Data Perawat Aktif
+    Ubah Data Bidang Usaha
 @endsection
 @section('content')
     <div class="card card">
