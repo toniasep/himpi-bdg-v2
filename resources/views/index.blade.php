@@ -114,7 +114,7 @@
                         </div>
                         @endif
                         <div class="box-img2 p-0" style="">
-                            <img src="{{ asset('image/katalog') }}/{{ $var['logo'] }}" class="img-fluid"
+                            <img src="{{ asset('image/katalog') }}/{{ $var['logo'] }}" class="img-katalog"
                                 alt="">
                         </div>
                         <div class="box-text  ps-2 pe-2" id="box-caption">
@@ -288,6 +288,12 @@ if($anggota == "not found"){ ?>
             box-shadow: 11px 12px 32px -16px rgba(0,0,0,0.48);
             -webkit-box-shadow: 11px 12px 32px -16px rgba(0,0,0,0.48);
             -moz-box-shadow: 11px 12px 32px -16px rgba(0,0,0,0.48);
+        }
+        .img-katalog{
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            object-position: center;
         }
     </style>
 @endsection
