@@ -73,7 +73,7 @@
                                 alt="">
                         </div>
                         <div class="box-text  ps-2 pe-2" id="box-caption">
-                            <p class="text-left" id="caption-katalog">{{ $var['nama_katalog'] }}</p>
+                            <p class="text-left" id="caption-katalog">{!! Str::limit($var['nama_katalog'], 25, ' ...') !!}</p>
                         </div>
                         <div class="col-lg-12 p-0" id="box-desc">
                             <div class="col-12 ps-3 pe-3 pt-2 pb-2 mb-2 jenis-perusahaan">
