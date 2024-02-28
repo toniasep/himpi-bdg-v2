@@ -98,7 +98,7 @@
         </div>
     </section>
     <!-- /section -->
-    <section class="pt-10 pb-10 vm">
+    {{-- <section class="pt-10 pb-10 vm">
         <div class="container">
             <h3 id="s6">Sejarah Ketua Umum HIPMI Kota Bandung</h3><br>
             <div class="swiper-container mb-10" data-margin="30" data-nav="true" data-dots="true" data-items-xl="5"
@@ -124,7 +124,7 @@
             </div>
             <!-- /.swiper-container -->
         </div>
-    </section>
+    </section> --}}
     <!-- /section -->
 @endsection
 @section('css-inner')
