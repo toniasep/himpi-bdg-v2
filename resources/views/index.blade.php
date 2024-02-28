@@ -95,7 +95,7 @@
                     {{-- <div class="col-lg-2 col-md-6 col-sm-6 box-katalog"
                         onclick="window.location.replace('{{ route('detailekatalog', $var['id']) }}','_blank')">
                         <div class="box-img p-0"
-                            style="background-image: url({{ asset('image/katalog/' . $var['logo']) }});background-size: contain;">
+                            style="background-image: url({{ asset('image/katalog/' . $var['logo']) }})">
                         </div>
                         <div class="box-text  ps-2 pe-2" id="box-caption">
                             <p class="text-left" id="caption-katalog">{{ $var['nama_katalog'] }}</p>
@@ -113,7 +113,7 @@
                             <i class="bi bi-star-fill" style="color: #047857;"></i>
                         </div>
                         @endif
-                        <div class="box-img2 p-0" style="">
+                        <div class="box-img2" style="">
                             <img src="{{ asset('image/katalog') }}/{{ $var['logo'] }}" class="img-katalog"
                                 alt="">
                         </div>
@@ -290,11 +290,22 @@ if($anggota == "not found"){ ?>
             -moz-box-shadow: 11px 12px 32px -16px rgba(0,0,0,0.48);
         }
         .img-katalog{
-            width: 200px;
-            height: 200px;
+            width: 210px;
+            height: 210px;
             object-fit: contain;
             object-position: center;
         }
+        /*untuk layar device berukuran kecil*/
+        @media screen and (max-width: 450px) {
+            .img-katalog{
+                width: 165px;
+                height: 165px;
+                object-fit: contain;
+                object-position: center;
+            }
+
+        }
+        
     </style>
 @endsection
 

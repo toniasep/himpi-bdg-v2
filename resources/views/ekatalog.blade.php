@@ -137,8 +137,8 @@
         }
         
         .img-katalog{
-            width: 200px;
-            height: 200px;
+            width: 210px;
+            height: 210px;
             object-fit: contain;
             object-position: center;
         }
@@ -152,7 +152,15 @@
                 width: 800px;
             }
 
+            .img-katalog{
+                width: 165px;
+                height: 165px;
+                object-fit: contain;
+                object-position: center;
+            }
+
         }
+        
     </style>
 @endsection
 @section('js')
