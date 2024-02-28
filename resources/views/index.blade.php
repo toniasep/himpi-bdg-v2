@@ -40,8 +40,8 @@
         <div class="container pt-10 pb-14 pt-md-7 pb-md-15" id="section">
             <div class="row align-items-center sejak-background">
                 <div class="col-md-4 sejak-position" style="margin-top: 24px" id="b">
-                    <h2 class="sejak-style">Sejak 2016</h2>
-                    <p class="mb-10 subtitle-custom" id="p">HIPMI Kota Bandung telah terbentuk sejak tahun 2016.</p>
+                    <h2 class="sejak-style">Sejak MUSCAB ke X</h2>
+                    <p class="mb-10 subtitle-custom" id="p">HIPMI Kota Bandung saat ini telah memasuki periodesasi 2023-2025.</p>
                     {{-- <a href="{{ route('tentangkami') }}" class="text-succes " id="href">Baca sejarah terbentuk</a> --}}
                 </div>
                 <div class="col-md-8 sejak-count">
