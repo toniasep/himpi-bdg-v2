@@ -38,7 +38,7 @@
                 <!--begin::Brand-->
                 <div class="aside-logo flex-column-auto pt-9 pb-7 px-9" id="kt_aside_logo">
                     <!--begin::Logo-->
-                    <a href="index.html">
+                    <a href="https://hipmibdg.or.id/">
                         <img alt="Logo" src="{{ asset('assets/media/logos/xlogo-text.png') }}" class="img-fluid" />
                         <img alt="Logo" src="{{ asset('assets/media/logos/logo-compact.svg') }}"
                             class="max-h-50px logo-minimize" />
