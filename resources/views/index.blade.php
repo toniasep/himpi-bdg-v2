@@ -173,8 +173,7 @@
                 <a href="{{ route('keanggotaan') }}" target="_blank" type="button" class="btn btn-success btn-green px-5" style="width: auto!important;">
                             <p class="subtitle-custom text-center"
                                 style="color: #FFFFFF; margin-top: 20px; font-weight: bold">
-                                Lihat Daftar
-                                Perusahaan</p>
+                                Lihat Cara Bergabung</p>
                         </a>
                 </div>
             </div>
