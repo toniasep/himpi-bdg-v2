@@ -110,7 +110,7 @@
                                             class="btn btn-navbar btn-outline-success" type="submit">Jadi Anggota</button>
                                     </li> --}}
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link  dropdown-toggle" href="#">
+                                        <a class="nav-link  dropdown-toggle" href="/admin/home">
                                             {{-- <img
                                                 style="width: 20px; color: {{ request()->is('/') ? '' : '#111827' }} "
                                                 src="{{ asset('image/pengguna') }}/{{ Auth::user()->photo }}"
