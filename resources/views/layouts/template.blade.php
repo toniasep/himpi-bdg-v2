@@ -184,7 +184,7 @@
                                         </span>
                                         <!--end::Svg Icon-->
                                     </span>
-                                    <span class="menu-title">Data Brand</span>
+                                    <span class="menu-title">Data Produk/Jasa</span>
                                 </a>
                             </div>
 

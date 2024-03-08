@@ -74,22 +74,18 @@
                                     <a class="nav-link {{ request()->is('tentang-kami') ? 'active' : '' }}"
                                         style="color: {{ request()->is('/') ? '' : '#111827' }} "
                                         href="{{ route('tentangkami') }}">Tentang Kami</a>
-                                </li>
+                                </li>                         
                                 <li class="nav-item dropdown">
                                     <a class="nav-link {{ request()->is('badan-otonom*') ? 'active' : '' }} dropdown-toggle"
                                         style="color: {{ request()->is('/') ? '' : '#111827' }} "
                                         href="{{ route('badanotonom') }}">Badan Otonom
                                         </i></a>
-                                    <ul class="dropdown-menu">
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                         @foreach ($panduan_anggota as $key => $item)
                                             <li class="nav-item"><a class="dropdown-item"
                                                     href="{{ route('detailbadanotonom', $item['id']) }}">{{ $item['judul'] }}</a>
                                             </li>
                                         @endforeach
-
-                                        {{-- <li class="nav-item"><a class="dropdown-item" href="{{route('lawandtax')}}">HIMPI PT (Perguruan
-                                                Tinggi)</a></li>
-                                        <li class="nav-item"><a class="dropdown-item" href="{{route('lawandtax')}}">Law and Task</a></li> --}}
                                     </ul>
                                 </li>
                                 @guest
@@ -110,9 +106,10 @@
                                             class="btn btn-navbar btn-outline-success" type="submit">Jadi Anggota</button>
                                     </li> --}}
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link  dropdown-toggle" href="/admin/home">
+                                        <a class="nav-link  dropdown-toggle" id="dropdownMenuButton1" 
+                                                data-bs-toggle="dropdown" href="#">
                                             {{-- <img
-                                                style="width: 20px; color: {{ request()->is('/') ? '' : '#111827' }} "
+                                                style="width: 20px; color: {{ request()->is('/') ? '' : '#111827' }} " 
                                                 src="{{ asset('image/pengguna') }}/{{ Auth::user()->photo }}"
                                                 alt="" class="img-fluid "> --}}
                                                 Akun
@@ -305,6 +302,9 @@
     {{-- <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> --}}
     <script src="{{ url('assets/js/plugins.js') }}"></script>
     <script src="{{ url('assets/js/theme.js') }}"></script>
+    <!-- Bootstrap JS (Bootstrap 5 no longer requires jQuery or Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
     @yield('js')
 </body>
 
