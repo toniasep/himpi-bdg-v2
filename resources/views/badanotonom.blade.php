@@ -73,6 +73,22 @@
                 background-position: center;
                 height: 352px;
             }  
+
+            .box-banom {
+                height: 480px;
+            }
+
+            .otonom-desc {
+                -webkit-box-orient: vertical;
+                display: -webkit-box;
+                -webkit-line-clamp: 5;
+                overflow: hidden;
+                font-size: 14px;
+            }
+
+            .otonom-title{
+                font-size: 20px;
+            }
         }
 
         .set-bg {
@@ -101,6 +117,13 @@
             background-position: left;
             border-top-right-radius: 144px;
             border-bottom-right-radius: 144px;
+        }
+
+        .img-banom {
+            width: 100%;
+            height: 150px;
+            object-fit: contain;
+            object-position: center;
         }
     </style>
 @endsection
