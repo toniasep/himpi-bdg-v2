@@ -108,9 +108,10 @@
                                     <li class="nav-item dropdown">
                                         <a class="nav-link {{ request()->is('pengguna*') ? 'active' : '' }} dropdown-toggle"
                                             id="dropdownMenuButton1" 
-                                            data-bs-toggle="dropdown" href="#
+                                            data-bs-toggle="dropdown" href="#"
                                             style="width: 20px; color: {{ request()->is('/') ? '' : '#111827' }} ">
                                             {{-- <img
+
                                                 src="{{ asset('image/pengguna') }}/{{ Auth::user()->photo }}"
                                                 alt="" class="img-fluid "/> --}}
                                                 Akun
@@ -305,7 +306,7 @@
     <script src="{{ url('assets/js/theme.js') }}"></script>
     <!-- Bootstrap JS (Bootstrap 5 no longer requires jQuery or Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    
     @yield('js')
 </body>
 

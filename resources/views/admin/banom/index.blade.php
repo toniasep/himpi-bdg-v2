@@ -24,7 +24,7 @@
                             <th>No</th>
                             <th>Logo</th>
                             <th>Judul Banom</th>
-                            <th>Deskripsi Singkat</th>
+                            <th>Deskripsi</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -35,14 +35,14 @@
                                 <td><img alt="Logo" src="{{ asset('image/banom') }}/{{ $item['logo'] }}"
                                         class="img-fluid w-100" /></td>
                                 <td>{{ $item['judul'] }}</td>
-                                <td>{{ $item['deskripsi_pendek'] }}</td>
+                                <td>{{ $item['deskripsi'] }}</td>
                                 <form action="{{ route('banom.destroy', $item['id']) }}" method="post">
                                     <td style="width: 38%">
 
                                         <a class="btn btn-outline btn-outline btn-outline-primary btn-sm btn-active-light-primary font-16 pl-2 addAttr"
                                             href="javascript:;" data-bs-toggle="modal" data-bs-target="#kt_modal_new_card"
                                             data-id="{{ $item['id'] }}" data-satu="{{ $item['logo'] }}"
-                                            data-dua="{{ $item['judul'] }}" data-tiga="{{ $item['deskripsi_pendek'] }}"
+                                            data-dua="{{ $item['judul'] }}" data-tiga="{{ $item['deskripsi'] }}"
                                             data-empat="{{ $item['deskripsi'] }}"
                                             data-created_at="{{ Carbon\Carbon::parse($item['created_at'])->formatLocalized('%A, %d %B %Y') }}"
                                             data-updated_at="{{ Carbon\Carbon::parse($item['updated_at'])->formatLocalized('%A, %d %B %Y') }}">

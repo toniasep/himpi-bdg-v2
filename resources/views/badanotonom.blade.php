@@ -43,7 +43,7 @@
                         </div>
                         <div class="row">
                             <p class="otonom-desc">
-                                {{ $item['deskripsi_pendek'] }}
+                                {!! Str::limit($item['deskripsi'], 150, ' ...') !!}
                             </p>
                             <div class="col-md-4">
                                 <button class="btn btn-info btn-sm btn-banom" type="button"
@@ -75,7 +75,7 @@
             }  
 
             .box-banom {
-                height: 480px;
+                height: 550px;
             }
 
             .otonom-desc {

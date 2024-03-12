@@ -69,7 +69,7 @@
                     @else
                         <div class="row">
                             <h2 id="s7">Kontak</h2>
-                            <div class="row  mt-7">
+                            <div class="row  mt-7 gap-3">
                                 <div class="col-md-4">
                                     <h4 id="sub-cpt">Nama Pemilik Usaha</h4>
                                     <p id="isi">{{ $var['nama_pemilik'] }}</p>
@@ -117,7 +117,7 @@
                                                         style="background-image: url('{{ asset('image/brand') }}/{{ $brands['logo_brand'] }}');    background-position: center; background-size: contain;">
                                                     </div>
                                                 </div>
-                                                <div class="col-md-8 col-md-8 pt-2 pb-2">
+                                                <div class="col-md-8 col-md-8 py-2 brand-desc">
                                                     <h4 id="cpt-br mt-1 ">{{ $brands['nama_brand'] }}</h4>
                                                     <p id="dsc-br">{{ $brands['deskripsi_brand'] }}</p>
                                                 </div>
@@ -196,13 +196,13 @@
 
             <h3 id="s7">Perusahaan Anggota Lainnya</h3>
             <!-- start content  -->
-            <div class="row d-flex justify-content-center mt-5 container-fluid mb-14">
+            <div class="row d-flex justify-content-center mt-5 container-fluid mb-14 gap-3">
                 @foreach ($katalog as $var)
                     <div class="col-lg-4 col-\sm -6 box-katalog-page pb-3"
                         onclick="window.location.replace('{{ route('detailekatalog', $var['id']) }}','_blank')"
                         style="width: 32%;">
-                        <div class="box-img2 p-0" style="">
-                            <img src="{{ asset('image/katalog/') }}/{{ $var['logo'] }}" class="img-fluid"
+                        <div class="box-img2 p-0">
+                            <img src="{{ asset('image/katalog/') }}/{{ $var['logo'] }}" class="img-fluid img-detail-kat"
                                 alt="">
                         </div>
                         <div class="box-text p-0">

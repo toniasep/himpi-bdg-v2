@@ -15,19 +15,13 @@
             <div class="col-lg-8 ">
                 <h1 class="caption-banom">{{ $result['judul'] }}</h1>
                 <p id="text-banom">
-                    {{ $result['deskripsi_pendek'] }}
+                    {!! $result['deskripsi'] !!}
                 </p>
             </div>
             <div class="col-lg-4 p-5 mt-5">
                 <div class="frame-image d-flex align-items-center justify-content-center " id="img-katalog-detail">
                     <img src="{{ asset('image/banom') }}/{{ $result['logo'] }}" class="img-fluid p-4" alt="">
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <p id="text-banom">
-                    {!! $result['deskripsi'] !!}
             </div>
         </div>
 
