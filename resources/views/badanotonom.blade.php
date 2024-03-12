@@ -98,7 +98,7 @@
             min-height: 300px;
             background-size: 150%;
             background-position: 5% 45%;
-            margin-bottom: 120px;
+            margin-bottom: 150px;
             object-fit: cover;
             object-position: center;
         }
