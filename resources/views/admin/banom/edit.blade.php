@@ -79,7 +79,7 @@
                             @endif
                         </div>
                     </div>
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-12 mb-10">
                             <label class="form-label">Deskripsi Pendek</label>
                             <textarea name="deskripsi_pendek"class="form-control" cols="10" rows="3" required>{{ $result['deskripsi_pendek'] }}</textarea>
@@ -89,7 +89,7 @@
                                 </span>
                             @endif
                         </div>
-                    </div>
+                    </div> -->
                     <div class="row">
                         <div class="col-12 mb-10">
                             <label class="form-label">deskripsi</label>
