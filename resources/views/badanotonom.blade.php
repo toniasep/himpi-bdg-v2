@@ -15,7 +15,7 @@
 </section> --}}
     <section class="wrapper section-first  mt-14">
         <div class="">
-            <div class="row set-bg" style="--bs-gutter-x: 0;">
+            <div class="row set-bg" style="--bs-gutter-x: 0; margin-bottom:0px;">
                 <div class="col-lg-7 htr ps-0 ps-sm-14 pe-0 pe-sm-12 pt-0 pt-sm-13 pb-0 pb-sm-13">
                     <div class="col-lg-11" id="mbl-pd-set">
                         <h2 id="tk">Badan Otonom</h2>
