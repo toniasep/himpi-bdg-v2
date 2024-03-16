@@ -73,9 +73,9 @@
                             <label class="form-label">kategori</label>
                             <select name="kategori" class="form-control cs  @error('kategori') is-invalid @enderror"
                                 data-control="select2" data-placeholder="Pilih Kategori" required>
-                                <option value="aktif" @if ($result['kategori'] == 'aktif') selected @endif>Aktif</option>
-                                <option value="partner" @if ($result['kategori'] == 'partner') selected @endif>Partner</option>
-                                <option value="riwayat" @if ($result['kategori'] == 'riwayat') selected @endif>Riwayat</option>
+                                <option value="aktif" @if ($result['kategori'] == 'aktif') selected @endif>Struktur BPC HIPMI Aktif</option>
+                                <option value="partner" @if ($result['kategori'] == 'partner') selected @endif>Ketua Badan Otonom</option>
+                                <option value="riwayat" @if ($result['kategori'] == 'riwayat') selected @endif>Sejarah Ketua Umum</option>
                             </select>
                             @if ($errors->has('kategori'))
                                 <span class="help-block text-danger">
