@@ -41,22 +41,22 @@ class KatalogAnggotaController extends Controller
     {
         // dd($request->toArray());
         //validasi
-        $this->validate($request, [
-            'nama_katalog' => 'required',
-            'deskripsi' => 'required',
-            'alamat' => 'required',
-            'nama_pemilik' => 'required',
-            'no_pemilik' => 'required',
-            'email_pemilik' => 'required',
-            'facebook' => 'max:255',
-            'instagram' => 'max:255',
-            'twitter' => 'max:255',
-            'youtube' => 'max:255',
-            'logo' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg|max:1048',
-            'master_bidang_usaha_id' => 'required',
-            'user_id' => 'required',
-            'cv' => 'required'
-        ]);
+        // $this->validate($request, [
+        //     'nama_katalog' => 'required',
+        //     'deskripsi' => 'required',
+        //     'alamat' => 'required',
+        //     'nama_pemilik' => 'required',
+        //     'no_pemilik' => 'required',
+        //     'email_pemilik' => 'required',
+        //     'facebook' => 'max:255',
+        //     'instagram' => 'max:255',
+        //     'twitter' => 'max:255',
+        //     'youtube' => 'max:255',
+        //     'logo' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg|max:1048',
+        //     'master_bidang_usaha_id' => 'required',
+        //     'user_id' => 'required',
+        //     'cv' => 'required'
+        // ]);
         $file_uploaded = null; 
         $katalog = new Katalog;
         $katalog->nama_katalog = $request->nama_katalog;
@@ -75,14 +75,16 @@ class KatalogAnggotaController extends Controller
         if ($request->hasFile('cv')) { 
             $path = 'public/pdf/katalog'; 
             $cv_name = 'HIPMI-Bandung(Himpunan-Pengusaha-Muda-Indonesia-Bandung)' . time() . '.' . request()->cv->getClientOriginalExtension(); 
-            $request->file('cv')->storeAs($path, $cv_name,['disk' => 'public_uploads']); 
+            // $request->file('cv')->storeAs($path, $cv_name,['disk' => 'public_uploads']); 
+            $request->cv->move(public_path('pdf/katalog'), $cv_name);
             $file_uploaded = $cv_name; 
             $katalog->cv = $file_uploaded;
         } 
         if ($request->hasFile('logo')) { 
             $path = 'public/image/katalog'; 
             $logo_name = 'HIPMI-Bandung(Himpunan-Pengusaha-Muda-Indonesia-Bandung)' . time() . '.' . request()->logo->getClientOriginalExtension(); 
-            $request->file('logo')->storeAs($path, $logo_name,['disk' => 'public_uploads']); 
+            // $request->file('logo')->storeAs($path, $logo_name,['disk' => 'public_uploads']); 
+            $request->logo->move(public_path('image/katalog'), $logo_name);
             $file_uploaded = $logo_name; 
             $katalog->logo = $file_uploaded;
         }        
@@ -137,7 +139,8 @@ class KatalogAnggotaController extends Controller
             if ($request->hasFile('cv')) { 
                 $path = 'public/pdf/katalog'; 
                 $cv_name = 'HIPMI-Bandung(Himpunan-Pengusaha-Muda-Indonesia-Bandung)' . time() . '.' . request()->cv->getClientOriginalExtension(); 
-                $request->file('cv')->storeAs($path, $cv_name,['disk' => 'public_uploads']); 
+                // $request->file('cv')->storeAs($path, $cv_name,['disk' => 'public_uploads']); 
+                $request->cv->move(public_path('pdf/katalog'), $cv_name);
                 $file_uploaded = $cv_name; 
                 $katalog->cv = $file_uploaded;
             } 
