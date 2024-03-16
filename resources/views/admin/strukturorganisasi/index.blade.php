@@ -291,9 +291,9 @@
                                     <select name="kategori"
                                         class="form-control cs  @error('kategori') is-invalid @enderror"
                                         data-control="select2" data-placeholder="Pilih Kategori" required>
-                                        <option value="aktif">Aktif</option>
-                                        <option value="partner">Partner</option>
-                                        <option value="riwayat">Riwayat</option>
+                                        <option value="aktif">Struktur BPC HIPMI Aktif</option>
+                                        <option value="partner">Ketua Badan Otonom</option>
+                                        <option value="riwayat">Sejarah Ketua Umum</option>
                                     </select>
                                     @if ($errors->has('kategori'))
                                         <span class="help-block text-danger">
