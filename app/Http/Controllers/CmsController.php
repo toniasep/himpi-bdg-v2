@@ -64,13 +64,13 @@ class CmsController extends Controller
     }
     public function strukturorganisasistore(Request $request)
     {
-        $this->validate($request, [
-            // 'jabatan' => 'required',
-            'gambar' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg',
-            'nama' => 'required', 
-            'kategori' => 'required', 
-            'nourut' => 'required', 
-        ]);
+        // $this->validate($request, [
+        //     // 'jabatan' => 'required',
+        //     'gambar' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg',
+        //     'nama' => 'required', 
+        //     'kategori' => 'required', 
+        //     'nourut' => 'required', 
+        // ]);
         $var = new Susunanpengurus;
         if ($request->hasFile('gambar')) {
             $nameimage = 'HIPMI-Pengurus-'.time().'.'.request()->gambar->getClientOriginalExtension();
