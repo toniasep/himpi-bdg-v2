@@ -26,13 +26,13 @@ class BrandController extends Controller
 
     public function store(Request $request)
     {
-         //validasi
-         $this->validate($request, [
-            'nama_brand' => 'required',
-            'deskripsi_brand' => 'required',
-            'logo_brand' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg|max:1048|required',
-            'katalog_id' => 'required'
-        ]);
+        //  //validasi
+        //  $this->validate($request, [
+        //     'nama_brand' => 'required',
+        //     'deskripsi_brand' => 'required',
+        //     'logo_brand' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg|max:1048|required',
+        //     'katalog_id' => 'required'
+        // ]);
 
         $file_uploaded = null; 
         $akun = new Brand;
@@ -66,12 +66,12 @@ class BrandController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            'nama_brand' => 'required',
-            'deskripsi_brand' => 'required',
-            'logo_brand' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg|max:1048',
-            'katalog_id' => 'required'
-        ]);
+        // $this->validate($request, [
+        //     'nama_brand' => 'required',
+        //     'deskripsi_brand' => 'required',
+        //     'logo_brand' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg|max:1048',
+        //     'katalog_id' => 'required'
+        // ]);
         $file_uploaded = null; 
         $akun = Brand::find($id);
         $akun->nama_brand = $request->nama_brand;
