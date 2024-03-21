@@ -93,17 +93,17 @@ class CmsController extends Controller
    }
    public function strukturorganisasiupdate(Request $request, $id)
     {
-        $validator = Validator::make($request->all(), [
-            'gambar' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg',
-            'nama' => 'required', 
-            'kategori' => 'required', 
-            'nourut' => 'required', 
-        ]);
-        if ($validator->fails()) {
-            return redirect()->back()
-                ->withErrors($validator)
-                ->withInput();
-        }
+        // $validator = Validator::make($request->all(), [
+        //     'gambar' => 'image|mimes:jpeg,png,jpg,JPG,gif,svg',
+        //     'nama' => 'required', 
+        //     'kategori' => 'required', 
+        //     'nourut' => 'required', 
+        // ]);
+        // if ($validator->fails()) {
+        //     return redirect()->back()
+        //         ->withErrors($validator)
+        //         ->withInput();
+        // }
         $var = Susunanpengurus::find($id);
         if ($request->hasFile('gambar')) {
             $nameimage = 'HIPMI-Pengurus-'.time().'.'.request()->gambar->getClientOriginalExtension();
