@@ -75,7 +75,7 @@
             @foreach ($aktif as $key => $item)
                 <div class="col-lg-3 col-md-6 col-sm-6 align-items-center">
                     <img class="mx-auto mb-4 col-12" src="{{ url('storage/public') }}/{{ $item['gambar'] }}"
-                        style="max-width: 300px; max-height: 200px; object-fit:cover; object-position: 0% 10%;"
+                        style="max-width: 300px; max-height: 200px; object-fit:cover; object-position: top;"
                         alt="HIPMI BANDUNG {{ $item['nama'] }}-{{ $item['jabatan'] }}" />
                     <h4 id="s7" class="mb-1">{{ $item['nama'] }}</h4>
                     <div id="s8" class="meta mb-2">{{ $item['jabatan'] }}</div>
@@ -88,7 +88,7 @@
             @foreach ($partner as $key => $item)
                 <div class="col-lg-3 col-md-6 col-sm-6 align-items-center">
                     <img class="mx-auto mb-4 col-12" src="{{ url('storage/public') }}/{{ $item['gambar'] }}"
-                        style="max-width: 300px; max-height: 200px; object-fit:cover; object-position: 0% 10%;"
+                        style="max-width: 300px; max-height: 200px; object-fit:cover; object-position: top;"
                         alt="HIPMI BANDUNG {{ $item['nama'] }}-{{ $item['jabatan'] }}" />
                     <h4 id="s7" class="mb-1">{{ $item['nama'] }}</h4>
                     <div id="s8" class="meta mb-2">{{ $item['jabatan'] }}</div>
@@ -98,7 +98,7 @@
         </div>
     </section>
     <!-- /section -->
-    {{-- <section class="pt-10 pb-10 vm">
+    <section class="pt-10 pb-10 vm">
         <div class="container">
             <h3 id="s6">Sejarah Ketua Umum HIPMI Kota Bandung</h3><br>
             <div class="swiper-container mb-10" data-margin="30" data-nav="true" data-dots="true" data-items-xl="5"
@@ -109,7 +109,7 @@
                             <div class="swiper-slide" id="slidetentang">
                                 <img src="{{ url('storage/public') }}/{{ $item['gambar'] }}"
                                     alt="HIPMI BANDUNG {{ $item['nama'] }}-{{ $item['jabatan'] }}"
-                                    style="max-width: 300px; max-height: 200px; object-fit:cover; object-position: 0% 10%;">
+                                    style="max-width: 300px; max-height: 200px; object-fit:cover; object-position: top;">
                                 <div class="pt-3 pb-3">
                                     <h4 id="s7" class="mb-1">{{ $item['nama'] }}</h4>
                                     <div id="s8" class="meta mb-2">{{ $item['periode'] }}</div>
@@ -124,7 +124,7 @@
             </div>
             <!-- /.swiper-container -->
         </div>
-    </section> --}}
+    </section>
     <!-- /section -->
 @endsection
 @section('css-inner')
